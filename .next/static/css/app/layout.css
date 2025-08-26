@@ -1,0 +1,4219 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Geist","arguments":[{"variable":"--font-geist-sans","subsets":["latin"]}],"variableName":"geistSans"} ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/8d697b304b401681-s.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/ba015fad6dcf6784-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/569ce4b8f30dc480-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: 'Geist Fallback';src: local("Arial");ascent-override: 95.94%;descent-override: 28.16%;line-gap-override: 0.00%;size-adjust: 104.76%
+}.__className_5cfdac {font-family: 'Geist', 'Geist Fallback';font-style: normal
+}.__variable_5cfdac {--font-geist-sans: 'Geist', 'Geist Fallback'
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Geist_Mono","arguments":[{"variable":"--font-geist-mono","subsets":["latin"]}],"variableName":"geistMono"} ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/9610d9e46709d722-s.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/747892c23ea88013-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/93f479601ee12b01-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: 'Geist Mono Fallback';src: local("Arial");ascent-override: 74.67%;descent-override: 21.92%;line-gap-override: 0.00%;size-adjust: 134.59%
+}.__className_9a8899 {font-family: 'Geist Mono', 'Geist Mono Fallback';font-style: normal
+}.__variable_9a8899 {--font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! tailwindcss v4.0.17 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-emerald-300: oklch(0.845 0.143 164.978);
+    --color-emerald-400: oklch(0.765 0.177 163.223);
+    --color-emerald-500: oklch(0.696 0.17 162.48);
+    --color-emerald-600: oklch(0.596 0.145 163.225);
+    --color-emerald-900: oklch(0.378 0.077 168.94);
+    --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-gray-600: oklch(0.446 0.03 256.802);
+    --color-gray-700: oklch(0.373 0.034 259.733);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-gray-900: oklch(0.21 0.034 264.665);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --leading-loose: 2;
+    --radius-xs: 0.125rem;
+    --blur-lg: 16px;
+    --blur-2xl: 40px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --font-surahName: "surah-name-v1-icon";
+    --font-quranCommon: "common/quran-common";
+    --font-q1: "qcf_p1";
+    --font-q2: "qcf_p2";
+    --font-q3: "qcf_p3";
+    --font-q4: "qcf_p4";
+    --font-q5: "qcf_p5";
+    --font-q6: "qcf_p6";
+    --font-q7: "qcf_p7";
+    --font-q8: "qcf_p8";
+    --font-q9: "qcf_p9";
+    --font-q10: "qcf_p10";
+    --font-q11: "qcf_p11";
+    --font-q12: "qcf_p12";
+    --font-q13: "qcf_p13";
+    --font-q14: "qcf_p14";
+    --font-q15: "qcf_p15";
+    --font-q16: "qcf_p16";
+    --font-q17: "qcf_p17";
+    --font-q18: "qcf_p18";
+    --font-q19: "qcf_p19";
+    --font-q20: "qcf_p20";
+    --font-q21: "qcf_p21";
+    --font-q22: "qcf_p22";
+    --font-q23: "qcf_p23";
+    --font-q24: "qcf_p24";
+    --font-q25: "qcf_p25";
+    --font-q26: "qcf_p26";
+    --font-q27: "qcf_p27";
+    --font-q28: "qcf_p28";
+    --font-q29: "qcf_p29";
+    --font-q30: "qcf_p30";
+    --font-q31: "qcf_p31";
+    --font-q32: "qcf_p32";
+    --font-q33: "qcf_p33";
+    --font-q34: "qcf_p34";
+    --font-q35: "qcf_p35";
+    --font-q36: "qcf_p36";
+    --font-q37: "qcf_p37";
+    --font-q38: "qcf_p38";
+    --font-q39: "qcf_p39";
+    --font-q40: "qcf_p40";
+    --font-q41: "qcf_p41";
+    --font-q42: "qcf_p42";
+    --font-q43: "qcf_p43";
+    --font-q44: "qcf_p44";
+    --font-q45: "qcf_p45";
+    --font-q46: "qcf_p46";
+    --font-q47: "qcf_p47";
+    --font-q48: "qcf_p48";
+    --font-q49: "qcf_p49";
+    --font-q50: "qcf_p50";
+    --font-q51: "qcf_p51";
+    --font-q52: "qcf_p52";
+    --font-q53: "qcf_p53";
+    --font-q54: "qcf_p54";
+    --font-q55: "qcf_p55";
+    --font-q56: "qcf_p56";
+    --font-q57: "qcf_p57";
+    --font-q58: "qcf_p58";
+    --font-q59: "qcf_p59";
+    --font-q60: "qcf_p60";
+    --font-q61: "qcf_p61";
+    --font-q62: "qcf_p62";
+    --font-q63: "qcf_p63";
+    --font-q64: "qcf_p64";
+    --font-q65: "qcf_p65";
+    --font-q66: "qcf_p66";
+    --font-q67: "qcf_p67";
+    --font-q68: "qcf_p68";
+    --font-q69: "qcf_p69";
+    --font-q70: "qcf_p70";
+    --font-q71: "qcf_p71";
+    --font-q72: "qcf_p72";
+    --font-q73: "qcf_p73";
+    --font-q74: "qcf_p74";
+    --font-q75: "qcf_p75";
+    --font-q76: "qcf_p76";
+    --font-q77: "qcf_p77";
+    --font-q78: "qcf_p78";
+    --font-q79: "qcf_p79";
+    --font-q80: "qcf_p80";
+    --font-q81: "qcf_p81";
+    --font-q82: "qcf_p82";
+    --font-q83: "qcf_p83";
+    --font-q84: "qcf_p84";
+    --font-q85: "qcf_p85";
+    --font-q86: "qcf_p86";
+    --font-q87: "qcf_p87";
+    --font-q88: "qcf_p88";
+    --font-q89: "qcf_p89";
+    --font-q90: "qcf_p90";
+    --font-q91: "qcf_p91";
+    --font-q92: "qcf_p92";
+    --font-q93: "qcf_p93";
+    --font-q94: "qcf_p94";
+    --font-q95: "qcf_p95";
+    --font-q96: "qcf_p96";
+    --font-q97: "qcf_p97";
+    --font-q98: "qcf_p98";
+    --font-q99: "qcf_p99";
+    --font-q100: "qcf_p100";
+    --font-q101: "qcf_p101";
+    --font-q102: "qcf_p102";
+    --font-q103: "qcf_p103";
+    --font-q104: "qcf_p104";
+    --font-q105: "qcf_p105";
+    --font-q106: "qcf_p106";
+    --font-q107: "qcf_p107";
+    --font-q108: "qcf_p108";
+    --font-q109: "qcf_p109";
+    --font-q110: "qcf_p110";
+    --font-q111: "qcf_p111";
+    --font-q112: "qcf_p112";
+    --font-q113: "qcf_p113";
+    --font-q114: "qcf_p114";
+    --font-q115: "qcf_p115";
+    --font-q116: "qcf_p116";
+    --font-q117: "qcf_p117";
+    --font-q118: "qcf_p118";
+    --font-q119: "qcf_p119";
+    --font-q120: "qcf_p120";
+    --font-q121: "qcf_p121";
+    --font-q122: "qcf_p122";
+    --font-q123: "qcf_p123";
+    --font-q124: "qcf_p124";
+    --font-q125: "qcf_p125";
+    --font-q126: "qcf_p126";
+    --font-q127: "qcf_p127";
+    --font-q128: "qcf_p128";
+    --font-q129: "qcf_p129";
+    --font-q130: "qcf_p130";
+    --font-q131: "qcf_p131";
+    --font-q132: "qcf_p132";
+    --font-q133: "qcf_p133";
+    --font-q134: "qcf_p134";
+    --font-q135: "qcf_p135";
+    --font-q136: "qcf_p136";
+    --font-q137: "qcf_p137";
+    --font-q138: "qcf_p138";
+    --font-q139: "qcf_p139";
+    --font-q140: "qcf_p140";
+    --font-q141: "qcf_p141";
+    --font-q142: "qcf_p142";
+    --font-q143: "qcf_p143";
+    --font-q144: "qcf_p144";
+    --font-q145: "qcf_p145";
+    --font-q146: "qcf_p146";
+    --font-q147: "qcf_p147";
+    --font-q148: "qcf_p148";
+    --font-q149: "qcf_p149";
+    --font-q150: "qcf_p150";
+    --font-q151: "qcf_p151";
+    --font-q152: "qcf_p152";
+    --font-q153: "qcf_p153";
+    --font-q154: "qcf_p154";
+    --font-q155: "qcf_p155";
+    --font-q156: "qcf_p156";
+    --font-q157: "qcf_p157";
+    --font-q158: "qcf_p158";
+    --font-q159: "qcf_p159";
+    --font-q160: "qcf_p160";
+    --font-q161: "qcf_p161";
+    --font-q162: "qcf_p162";
+    --font-q163: "qcf_p163";
+    --font-q164: "qcf_p164";
+    --font-q165: "qcf_p165";
+    --font-q166: "qcf_p166";
+    --font-q167: "qcf_p167";
+    --font-q168: "qcf_p168";
+    --font-q169: "qcf_p169";
+    --font-q170: "qcf_p170";
+    --font-q171: "qcf_p171";
+    --font-q172: "qcf_p172";
+    --font-q173: "qcf_p173";
+    --font-q174: "qcf_p174";
+    --font-q175: "qcf_p175";
+    --font-q176: "qcf_p176";
+    --font-q177: "qcf_p177";
+    --font-q178: "qcf_p178";
+    --font-q179: "qcf_p179";
+    --font-q180: "qcf_p180";
+    --font-q181: "qcf_p181";
+    --font-q182: "qcf_p182";
+    --font-q183: "qcf_p183";
+    --font-q184: "qcf_p184";
+    --font-q185: "qcf_p185";
+    --font-q186: "qcf_p186";
+    --font-q187: "qcf_p187";
+    --font-q188: "qcf_p188";
+    --font-q189: "qcf_p189";
+    --font-q190: "qcf_p190";
+    --font-q191: "qcf_p191";
+    --font-q192: "qcf_p192";
+    --font-q193: "qcf_p193";
+    --font-q194: "qcf_p194";
+    --font-q195: "qcf_p195";
+    --font-q196: "qcf_p196";
+    --font-q197: "qcf_p197";
+    --font-q198: "qcf_p198";
+    --font-q199: "qcf_p199";
+    --font-q200: "qcf_p200";
+    --font-q201: "qcf_p201";
+    --font-q202: "qcf_p202";
+    --font-q203: "qcf_p203";
+    --font-q204: "qcf_p204";
+    --font-q205: "qcf_p205";
+    --font-q206: "qcf_p206";
+    --font-q207: "qcf_p207";
+    --font-q208: "qcf_p208";
+    --font-q209: "qcf_p209";
+    --font-q210: "qcf_p210";
+    --font-q211: "qcf_p211";
+    --font-q212: "qcf_p212";
+    --font-q213: "qcf_p213";
+    --font-q214: "qcf_p214";
+    --font-q215: "qcf_p215";
+    --font-q216: "qcf_p216";
+    --font-q217: "qcf_p217";
+    --font-q218: "qcf_p218";
+    --font-q219: "qcf_p219";
+    --font-q220: "qcf_p220";
+    --font-q221: "qcf_p221";
+    --font-q222: "qcf_p222";
+    --font-q223: "qcf_p223";
+    --font-q224: "qcf_p224";
+    --font-q225: "qcf_p225";
+    --font-q226: "qcf_p226";
+    --font-q227: "qcf_p227";
+    --font-q228: "qcf_p228";
+    --font-q229: "qcf_p229";
+    --font-q230: "qcf_p230";
+    --font-q231: "qcf_p231";
+    --font-q232: "qcf_p232";
+    --font-q233: "qcf_p233";
+    --font-q234: "qcf_p234";
+    --font-q235: "qcf_p235";
+    --font-q236: "qcf_p236";
+    --font-q237: "qcf_p237";
+    --font-q238: "qcf_p238";
+    --font-q239: "qcf_p239";
+    --font-q240: "qcf_p240";
+    --font-q241: "qcf_p241";
+    --font-q242: "qcf_p242";
+    --font-q243: "qcf_p243";
+    --font-q244: "qcf_p244";
+    --font-q245: "qcf_p245";
+    --font-q246: "qcf_p246";
+    --font-q247: "qcf_p247";
+    --font-q248: "qcf_p248";
+    --font-q249: "qcf_p249";
+    --font-q250: "qcf_p250";
+    --font-q251: "qcf_p251";
+    --font-q252: "qcf_p252";
+    --font-q253: "qcf_p253";
+    --font-q254: "qcf_p254";
+    --font-q255: "qcf_p255";
+    --font-q256: "qcf_p256";
+    --font-q257: "qcf_p257";
+    --font-q258: "qcf_p258";
+    --font-q259: "qcf_p259";
+    --font-q260: "qcf_p260";
+    --font-q261: "qcf_p261";
+    --font-q262: "qcf_p262";
+    --font-q263: "qcf_p263";
+    --font-q264: "qcf_p264";
+    --font-q265: "qcf_p265";
+    --font-q266: "qcf_p266";
+    --font-q267: "qcf_p267";
+    --font-q268: "qcf_p268";
+    --font-q269: "qcf_p269";
+    --font-q270: "qcf_p270";
+    --font-q271: "qcf_p271";
+    --font-q272: "qcf_p272";
+    --font-q273: "qcf_p273";
+    --font-q274: "qcf_p274";
+    --font-q275: "qcf_p275";
+    --font-q276: "qcf_p276";
+    --font-q277: "qcf_p277";
+    --font-q278: "qcf_p278";
+    --font-q279: "qcf_p279";
+    --font-q280: "qcf_p280";
+    --font-q281: "qcf_p281";
+    --font-q282: "qcf_p282";
+    --font-q283: "qcf_p283";
+    --font-q284: "qcf_p284";
+    --font-q285: "qcf_p285";
+    --font-q286: "qcf_p286";
+    --font-q287: "qcf_p287";
+    --font-q288: "qcf_p288";
+    --font-q289: "qcf_p289";
+    --font-q290: "qcf_p290";
+    --font-q291: "qcf_p291";
+    --font-q292: "qcf_p292";
+    --font-q293: "qcf_p293";
+    --font-q294: "qcf_p294";
+    --font-q295: "qcf_p295";
+    --font-q296: "qcf_p296";
+    --font-q297: "qcf_p297";
+    --font-q298: "qcf_p298";
+    --font-q299: "qcf_p299";
+    --font-q300: "qcf_p300";
+    --font-q301: "qcf_p301";
+    --font-q302: "qcf_p302";
+    --font-q303: "qcf_p303";
+    --font-q304: "qcf_p304";
+    --font-q305: "qcf_p305";
+    --font-q306: "qcf_p306";
+    --font-q307: "qcf_p307";
+    --font-q308: "qcf_p308";
+    --font-q309: "qcf_p309";
+    --font-q310: "qcf_p310";
+    --font-q311: "qcf_p311";
+    --font-q312: "qcf_p312";
+    --font-q313: "qcf_p313";
+    --font-q314: "qcf_p314";
+    --font-q315: "qcf_p315";
+    --font-q316: "qcf_p316";
+    --font-q317: "qcf_p317";
+    --font-q318: "qcf_p318";
+    --font-q319: "qcf_p319";
+    --font-q320: "qcf_p320";
+    --font-q321: "qcf_p321";
+    --font-q322: "qcf_p322";
+    --font-q323: "qcf_p323";
+    --font-q324: "qcf_p324";
+    --font-q325: "qcf_p325";
+    --font-q326: "qcf_p326";
+    --font-q327: "qcf_p327";
+    --font-q328: "qcf_p328";
+    --font-q329: "qcf_p329";
+    --font-q330: "qcf_p330";
+    --font-q331: "qcf_p331";
+    --font-q332: "qcf_p332";
+    --font-q333: "qcf_p333";
+    --font-q334: "qcf_p334";
+    --font-q335: "qcf_p335";
+    --font-q336: "qcf_p336";
+    --font-q337: "qcf_p337";
+    --font-q338: "qcf_p338";
+    --font-q339: "qcf_p339";
+    --font-q340: "qcf_p340";
+    --font-q341: "qcf_p341";
+    --font-q342: "qcf_p342";
+    --font-q343: "qcf_p343";
+    --font-q344: "qcf_p344";
+    --font-q345: "qcf_p345";
+    --font-q346: "qcf_p346";
+    --font-q347: "qcf_p347";
+    --font-q348: "qcf_p348";
+    --font-q349: "qcf_p349";
+    --font-q350: "qcf_p350";
+    --font-q351: "qcf_p351";
+    --font-q352: "qcf_p352";
+    --font-q353: "qcf_p353";
+    --font-q354: "qcf_p354";
+    --font-q355: "qcf_p355";
+    --font-q356: "qcf_p356";
+    --font-q357: "qcf_p357";
+    --font-q358: "qcf_p358";
+    --font-q359: "qcf_p359";
+    --font-q360: "qcf_p360";
+    --font-q361: "qcf_p361";
+    --font-q362: "qcf_p362";
+    --font-q363: "qcf_p363";
+    --font-q364: "qcf_p364";
+    --font-q365: "qcf_p365";
+    --font-q366: "qcf_p366";
+    --font-q367: "qcf_p367";
+    --font-q368: "qcf_p368";
+    --font-q369: "qcf_p369";
+    --font-q370: "qcf_p370";
+    --font-q371: "qcf_p371";
+    --font-q372: "qcf_p372";
+    --font-q373: "qcf_p373";
+    --font-q374: "qcf_p374";
+    --font-q375: "qcf_p375";
+    --font-q376: "qcf_p376";
+    --font-q377: "qcf_p377";
+    --font-q378: "qcf_p378";
+    --font-q379: "qcf_p379";
+    --font-q380: "qcf_p380";
+    --font-q381: "qcf_p381";
+    --font-q382: "qcf_p382";
+    --font-q383: "qcf_p383";
+    --font-q384: "qcf_p384";
+    --font-q385: "qcf_p385";
+    --font-q386: "qcf_p386";
+    --font-q387: "qcf_p387";
+    --font-q388: "qcf_p388";
+    --font-q389: "qcf_p389";
+    --font-q390: "qcf_p390";
+    --font-q391: "qcf_p391";
+    --font-q392: "qcf_p392";
+    --font-q393: "qcf_p393";
+    --font-q394: "qcf_p394";
+    --font-q395: "qcf_p395";
+    --font-q396: "qcf_p396";
+    --font-q397: "qcf_p397";
+    --font-q398: "qcf_p398";
+    --font-q399: "qcf_p399";
+    --font-q400: "qcf_p400";
+    --font-q401: "qcf_p401";
+    --font-q402: "qcf_p402";
+    --font-q403: "qcf_p403";
+    --font-q404: "qcf_p404";
+    --font-q405: "qcf_p405";
+    --font-q406: "qcf_p406";
+    --font-q407: "qcf_p407";
+    --font-q408: "qcf_p408";
+    --font-q409: "qcf_p409";
+    --font-q410: "qcf_p410";
+    --font-q411: "qcf_p411";
+    --font-q412: "qcf_p412";
+    --font-q413: "qcf_p413";
+    --font-q414: "qcf_p414";
+    --font-q415: "qcf_p415";
+    --font-q416: "qcf_p416";
+    --font-q417: "qcf_p417";
+    --font-q418: "qcf_p418";
+    --font-q419: "qcf_p419";
+    --font-q420: "qcf_p420";
+    --font-q421: "qcf_p421";
+    --font-q422: "qcf_p422";
+    --font-q423: "qcf_p423";
+    --font-q424: "qcf_p424";
+    --font-q425: "qcf_p425";
+    --font-q426: "qcf_p426";
+    --font-q427: "qcf_p427";
+    --font-q428: "qcf_p428";
+    --font-q429: "qcf_p429";
+    --font-q430: "qcf_p430";
+    --font-q431: "qcf_p431";
+    --font-q432: "qcf_p432";
+    --font-q433: "qcf_p433";
+    --font-q434: "qcf_p434";
+    --font-q435: "qcf_p435";
+    --font-q436: "qcf_p436";
+    --font-q437: "qcf_p437";
+    --font-q438: "qcf_p438";
+    --font-q439: "qcf_p439";
+    --font-q440: "qcf_p440";
+    --font-q441: "qcf_p441";
+    --font-q442: "qcf_p442";
+    --font-q443: "qcf_p443";
+    --font-q444: "qcf_p444";
+    --font-q445: "qcf_p445";
+    --font-q446: "qcf_p446";
+    --font-q447: "qcf_p447";
+    --font-q448: "qcf_p448";
+    --font-q449: "qcf_p449";
+    --font-q450: "qcf_p450";
+    --font-q451: "qcf_p451";
+    --font-q452: "qcf_p452";
+    --font-q453: "qcf_p453";
+    --font-q454: "qcf_p454";
+    --font-q455: "qcf_p455";
+    --font-q456: "qcf_p456";
+    --font-q457: "qcf_p457";
+    --font-q458: "qcf_p458";
+    --font-q459: "qcf_p459";
+    --font-q460: "qcf_p460";
+    --font-q461: "qcf_p461";
+    --font-q462: "qcf_p462";
+    --font-q463: "qcf_p463";
+    --font-q464: "qcf_p464";
+    --font-q465: "qcf_p465";
+    --font-q466: "qcf_p466";
+    --font-q467: "qcf_p467";
+    --font-q468: "qcf_p468";
+    --font-q469: "qcf_p469";
+    --font-q470: "qcf_p470";
+    --font-q471: "qcf_p471";
+    --font-q472: "qcf_p472";
+    --font-q473: "qcf_p473";
+    --font-q474: "qcf_p474";
+    --font-q475: "qcf_p475";
+    --font-q476: "qcf_p476";
+    --font-q477: "qcf_p477";
+    --font-q478: "qcf_p478";
+    --font-q479: "qcf_p479";
+    --font-q480: "qcf_p480";
+    --font-q481: "qcf_p481";
+    --font-q482: "qcf_p482";
+    --font-q483: "qcf_p483";
+    --font-q484: "qcf_p484";
+    --font-q485: "qcf_p485";
+    --font-q486: "qcf_p486";
+    --font-q487: "qcf_p487";
+    --font-q488: "qcf_p488";
+    --font-q489: "qcf_p489";
+    --font-q490: "qcf_p490";
+    --font-q491: "qcf_p491";
+    --font-q492: "qcf_p492";
+    --font-q493: "qcf_p493";
+    --font-q494: "qcf_p494";
+    --font-q495: "qcf_p495";
+    --font-q496: "qcf_p496";
+    --font-q497: "qcf_p497";
+    --font-q498: "qcf_p498";
+    --font-q499: "qcf_p499";
+    --font-q500: "qcf_p500";
+    --font-q501: "qcf_p501";
+    --font-q502: "qcf_p502";
+    --font-q503: "qcf_p503";
+    --font-q504: "qcf_p504";
+    --font-q505: "qcf_p505";
+    --font-q506: "qcf_p506";
+    --font-q507: "qcf_p507";
+    --font-q508: "qcf_p508";
+    --font-q509: "qcf_p509";
+    --font-q510: "qcf_p510";
+    --font-q511: "qcf_p511";
+    --font-q512: "qcf_p512";
+    --font-q513: "qcf_p513";
+    --font-q514: "qcf_p514";
+    --font-q515: "qcf_p515";
+    --font-q516: "qcf_p516";
+    --font-q517: "qcf_p517";
+    --font-q518: "qcf_p518";
+    --font-q519: "qcf_p519";
+    --font-q520: "qcf_p520";
+    --font-q521: "qcf_p521";
+    --font-q522: "qcf_p522";
+    --font-q523: "qcf_p523";
+    --font-q524: "qcf_p524";
+    --font-q525: "qcf_p525";
+    --font-q526: "qcf_p526";
+    --font-q527: "qcf_p527";
+    --font-q528: "qcf_p528";
+    --font-q529: "qcf_p529";
+    --font-q530: "qcf_p530";
+    --font-q531: "qcf_p531";
+    --font-q532: "qcf_p532";
+    --font-q533: "qcf_p533";
+    --font-q534: "qcf_p534";
+    --font-q535: "qcf_p535";
+    --font-q536: "qcf_p536";
+    --font-q537: "qcf_p537";
+    --font-q538: "qcf_p538";
+    --font-q539: "qcf_p539";
+    --font-q540: "qcf_p540";
+    --font-q541: "qcf_p541";
+    --font-q542: "qcf_p542";
+    --font-q543: "qcf_p543";
+    --font-q544: "qcf_p544";
+    --font-q545: "qcf_p545";
+    --font-q546: "qcf_p546";
+    --font-q547: "qcf_p547";
+    --font-q548: "qcf_p548";
+    --font-q549: "qcf_p549";
+    --font-q550: "qcf_p550";
+    --font-q551: "qcf_p551";
+    --font-q552: "qcf_p552";
+    --font-q553: "qcf_p553";
+    --font-q554: "qcf_p554";
+    --font-q555: "qcf_p555";
+    --font-q556: "qcf_p556";
+    --font-q557: "qcf_p557";
+    --font-q558: "qcf_p558";
+    --font-q559: "qcf_p559";
+    --font-q560: "qcf_p560";
+    --font-q561: "qcf_p561";
+    --font-q562: "qcf_p562";
+    --font-q563: "qcf_p563";
+    --font-q564: "qcf_p564";
+    --font-q565: "qcf_p565";
+    --font-q566: "qcf_p566";
+    --font-q567: "qcf_p567";
+    --font-q568: "qcf_p568";
+    --font-q569: "qcf_p569";
+    --font-q570: "qcf_p570";
+    --font-q571: "qcf_p571";
+    --font-q572: "qcf_p572";
+    --font-q573: "qcf_p573";
+    --font-q574: "qcf_p574";
+    --font-q575: "qcf_p575";
+    --font-q576: "qcf_p576";
+    --font-q577: "qcf_p577";
+    --font-q578: "qcf_p578";
+    --font-q579: "qcf_p579";
+    --font-q580: "qcf_p580";
+    --font-q581: "qcf_p581";
+    --font-q582: "qcf_p582";
+    --font-q583: "qcf_p583";
+    --font-q584: "qcf_p584";
+    --font-q585: "qcf_p585";
+    --font-q586: "qcf_p586";
+    --font-q587: "qcf_p587";
+    --font-q588: "qcf_p588";
+    --font-q589: "qcf_p589";
+    --font-q590: "qcf_p590";
+    --font-q591: "qcf_p591";
+    --font-q592: "qcf_p592";
+    --font-q593: "qcf_p593";
+    --font-q594: "qcf_p594";
+    --font-q595: "qcf_p595";
+    --font-q596: "qcf_p596";
+    --font-q597: "qcf_p597";
+    --font-q598: "qcf_p598";
+    --font-q599: "qcf_p599";
+    --font-q600: "qcf_p600";
+    --font-q601: "qcf_p601";
+    --font-q602: "qcf_p602";
+    --font-q603: "qcf_p603";
+    --font-q604: "qcf_p604";
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: color-mix(in oklab, currentColor 50%, transparent);
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+  .z-0\! {
+    z-index: 0 !important;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .m-9 {
+    margin: calc(var(--spacing) * 9);
+  }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-3 {
+    margin-inline: calc(var(--spacing) * 3);
+  }
+  .mx-4\.5 {
+    margin-inline: calc(var(--spacing) * 4.5);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
+  .my-auto {
+    margin-block: auto;
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-30 {
+    margin-top: calc(var(--spacing) * 30);
+  }
+  .mr-1\.5 {
+    margin-right: calc(var(--spacing) * 1.5);
+  }
+  .mr-\[10px\] {
+    margin-right: 10px;
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-\[1\.5px\] {
+    height: 1.5px;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
+  .w-\[190px\] {
+    width: 190px;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .min-w-screen {
+    min-width: 100vw;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .-rotate-45 {
+    rotate: calc(45deg * -1);
+  }
+  .rotate-45 {
+    rotate: 45deg;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .appearance-none {
+    appearance: none;
+  }
+  .auto-rows-fr {
+    grid-auto-rows: minmax(0, 1fr);
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .place-items-center {
+    place-items: center;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-x-5 {
+    column-gap: calc(var(--spacing) * 5);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
+  }
+  .gap-y-4 {
+    row-gap: calc(var(--spacing) * 4);
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .rounded-\[3px\] {
+    border-radius: 3px;
+  }
+  .rounded-\[6px\] {
+    border-radius: 6px;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius);
+  }
+  .rounded-none {
+    border-radius: 0;
+  }
+  .rounded-xs {
+    border-radius: var(--radius-xs);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+  .border-emerald-400 {
+    border-color: var(--color-emerald-400);
+  }
+  .bg-emerald-400 {
+    background-color: var(--color-emerald-400);
+  }
+  .bg-emerald-500 {
+    background-color: var(--color-emerald-500);
+  }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
+  }
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
+  .bg-gray-800\/50 {
+    background-color: color-mix(in oklab, var(--color-gray-800) 50%, transparent);
+  }
+  .bg-muted {
+    background-color: var(--muted);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-transparent\/30 {
+    background-color: color-mix(in oklab, transparent 30%, transparent);
+  }
+  .bg-gradient-to-br {
+    --tw-gradient-position: to bottom right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .from-gray-900 {
+    --tw-gradient-from: var(--color-gray-900);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-gray-800 {
+    --tw-gradient-to: var(--color-gray-800);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-75\% {
+    --tw-gradient-to-position: 75%;
+  }
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-\[3px\] {
+    padding: 3px;
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-quranCommon {
+    font-family: var(--font-quranCommon);
+  }
+  .font-surahName {
+    font-family: var(--font-surahName);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .leading-14 {
+    --tw-leading: calc(var(--spacing) * 14);
+    line-height: calc(var(--spacing) * 14);
+  }
+  .leading-loose {
+    --tw-leading: var(--leading-loose);
+    line-height: var(--leading-loose);
+  }
+  .font-\[500\] {
+    --tw-font-weight: 500;
+    font-weight: 500;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
+  .font-\[700\] {
+    --tw-font-weight: 700;
+    font-weight: 700;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-emerald-300 {
+    color: var(--color-emerald-300);
+  }
+  .text-emerald-400 {
+    color: var(--color-emerald-400);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-muted-foreground {
+    color: var(--muted-foreground);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .accent-emerald-500 {
+    accent-color: var(--color-emerald-500);
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .backdrop-blur-2xl {
+    --tw-backdrop-blur: blur(var(--blur-2xl));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-blur-lg {
+    --tw-backdrop-blur: blur(var(--blur-lg));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-\[color\,box-shadow\] {
+    transition-property: color,box-shadow;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .selection\:bg-emerald-400 {
+    & *::selection {
+      background-color: var(--color-emerald-400);
+    }
+    &::selection {
+      background-color: var(--color-emerald-400);
+    }
+  }
+  .selection\:bg-transparent {
+    & *::selection {
+      background-color: transparent;
+    }
+    &::selection {
+      background-color: transparent;
+    }
+  }
+  .selection\:text-gray-700 {
+    & *::selection {
+      color: var(--color-gray-700);
+    }
+    &::selection {
+      color: var(--color-gray-700);
+    }
+  }
+  .hover\:bg-emerald-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-600);
+      }
+    }
+  }
+  .hover\:bg-emerald-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-900);
+      }
+    }
+  }
+  .hover\:outline-2 {
+    &:hover {
+      @media (hover: hover) {
+        outline-style: var(--tw-outline-style);
+        outline-width: 2px;
+      }
+    }
+  }
+  .hover\:outline-emerald-300 {
+    &:hover {
+      @media (hover: hover) {
+        outline-color: var(--color-emerald-300);
+      }
+    }
+  }
+  .focus-visible\:border-ring {
+    &:focus-visible {
+      border-color: var(--ring);
+    }
+  }
+  .focus-visible\:ring-\[3px\] {
+    &:focus-visible {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus-visible\:ring-ring\/50 {
+    &:focus-visible {
+      --tw-ring-color: color-mix(in oklab, var(--ring) 50%, transparent);
+    }
+  }
+  .focus-visible\:outline-ring {
+    &:focus-visible {
+      outline-color: var(--ring);
+    }
+  }
+  .disabled\:pointer-events-none {
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+  .disabled\:opacity-50 {
+    &:disabled {
+      opacity: 50%;
+    }
+  }
+  .data-\[state\=active\]\:border-b-4 {
+    &[data-state="active"] {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 4px;
+    }
+  }
+  .data-\[state\=active\]\:border-b-emerald-400 {
+    &[data-state="active"] {
+      border-bottom-color: var(--color-emerald-400);
+    }
+  }
+  .data-\[state\=active\]\:text-emerald-400 {
+    &[data-state="active"] {
+      color: var(--color-emerald-400);
+    }
+  }
+  .sm\:text-4xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .sm\:text-xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .dark\:text-muted-foreground {
+    &:is(.dark *) {
+      color: var(--muted-foreground);
+    }
+  }
+  .dark\:data-\[state\=active\]\:text-foreground {
+    &:is(.dark *) {
+      &[data-state="active"] {
+        color: var(--foreground);
+      }
+    }
+  }
+  .\[\&_svg\]\:pointer-events-none {
+    & svg {
+      pointer-events: none;
+    }
+  }
+  .\[\&_svg\]\:shrink-0 {
+    & svg {
+      flex-shrink: 0;
+    }
+  }
+  .\[\&_svg\:not\(\[class\*\=\'size-\'\]\)\]\:size-4 {
+    & svg:not([class*='size-']) {
+      width: calc(var(--spacing) * 4);
+      height: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\&\:\:-moz-range-thumb\]\:h-5 {
+    &::-moz-range-thumb {
+      height: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-moz-range-thumb\]\:w-5 {
+    &::-moz-range-thumb {
+      width: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-moz-range-thumb\]\:cursor-pointer {
+    &::-moz-range-thumb {
+      cursor: pointer;
+    }
+  }
+  .\[\&\:\:-moz-range-thumb\]\:rounded-full {
+    &::-moz-range-thumb {
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .\[\&\:\:-moz-range-thumb\]\:bg-emerald-500 {
+    &::-moz-range-thumb {
+      background-color: var(--color-emerald-500);
+    }
+  }
+  .\[\&\:\:-ms-thumb\]\:h-5 {
+    &::-ms-thumb {
+      height: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-ms-thumb\]\:w-5 {
+    &::-ms-thumb {
+      width: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-ms-thumb\]\:cursor-pointer {
+    &::-ms-thumb {
+      cursor: pointer;
+    }
+  }
+  .\[\&\:\:-ms-thumb\]\:rounded-full {
+    &::-ms-thumb {
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .\[\&\:\:-ms-thumb\]\:bg-emerald-500 {
+    &::-ms-thumb {
+      background-color: var(--color-emerald-500);
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:h-5 {
+    &::-webkit-slider-thumb {
+      height: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:w-5 {
+    &::-webkit-slider-thumb {
+      width: calc(var(--spacing) * 5);
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:cursor-pointer {
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:appearance-none {
+    &::-webkit-slider-thumb {
+      appearance: none;
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:rounded-full {
+    &::-webkit-slider-thumb {
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .\[\&\:\:-webkit-slider-thumb\]\:bg-emerald-500 {
+    &::-webkit-slider-thumb {
+      background-color: var(--color-emerald-500);
+    }
+  }
+}
+@font-face {
+  font-family: "surah-name-v1-icon";
+  src: url("https://static-cdn.tarteel.ai/qul/fonts/surah-names/v1/surah-name-v1.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "common/quran-common";
+  src: url("https://static-cdn.tarteel.ai/qul/fonts/common/quran-common.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/public/font/Inter_18pt-Regular.ttf");
+}
+@font-face {
+  font-family: "qcf";
+  src: url("/public/font/QCF_P001.TTF");
+}
+@font-face {
+  font-family: "qpc-nastaleeq";
+  src: url("https://static-cdn.tarteel.ai/qul/fonts/nastaleeq/KFGQPCNastaleeq-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "qpcfixed";
+  src: url("/public/font/KfgqpcHafsUthmanicScriptRegular-1jGEe.ttf");
+}
+@font-face {
+  font-family: "qcfp";
+  src: url("/public/font/mushaf/QCF_P001.TTF");
+}
+@font-face {
+  font-family: "qcf_p1";
+  src: url("/public/font/mushaf/QCF_P001.TTF");
+}
+@font-face {
+  font-family: "qcf_p2";
+  src: url("/public/font/mushaf/QCF_P002.TTF");
+}
+@font-face {
+  font-family: "qcf_p3";
+  src: url("/public/font/mushaf/QCF_P003.TTF");
+}
+@font-face {
+  font-family: "qcf_p4";
+  src: url("/public/font/mushaf/QCF_P004.TTF");
+}
+@font-face {
+  font-family: "qcf_p5";
+  src: url("/public/font/mushaf/QCF_P005.TTF");
+}
+@font-face {
+  font-family: "qcf_p6";
+  src: url("/public/font/mushaf/QCF_P006.TTF");
+}
+@font-face {
+  font-family: "qcf_p7";
+  src: url("/public/font/mushaf/QCF_P007.TTF");
+}
+@font-face {
+  font-family: "qcf_p8";
+  src: url("/public/font/mushaf/QCF_P008.TTF");
+}
+@font-face {
+  font-family: "qcf_p9";
+  src: url("/public/font/mushaf/QCF_P009.TTF");
+}
+@font-face {
+  font-family: "qcf_p10";
+  src: url("/public/font/mushaf/QCF_P010.TTF");
+}
+@font-face {
+  font-family: "qcf_p11";
+  src: url("/public/font/mushaf/QCF_P011.TTF");
+}
+@font-face {
+  font-family: "qcf_p12";
+  src: url("/public/font/mushaf/QCF_P012.TTF");
+}
+@font-face {
+  font-family: "qcf_p13";
+  src: url("/public/font/mushaf/QCF_P013.TTF");
+}
+@font-face {
+  font-family: "qcf_p14";
+  src: url("/public/font/mushaf/QCF_P014.TTF");
+}
+@font-face {
+  font-family: "qcf_p15";
+  src: url("/public/font/mushaf/QCF_P015.TTF");
+}
+@font-face {
+  font-family: "qcf_p16";
+  src: url("/public/font/mushaf/QCF_P016.TTF");
+}
+@font-face {
+  font-family: "qcf_p17";
+  src: url("/public/font/mushaf/QCF_P017.TTF");
+}
+@font-face {
+  font-family: "qcf_p18";
+  src: url("/public/font/mushaf/QCF_P018.TTF");
+}
+@font-face {
+  font-family: "qcf_p19";
+  src: url("/public/font/mushaf/QCF_P019.TTF");
+}
+@font-face {
+  font-family: "qcf_p20";
+  src: url("/public/font/mushaf/QCF_P020.TTF");
+}
+@font-face {
+  font-family: "qcf_p21";
+  src: url("/public/font/mushaf/QCF_P021.TTF");
+}
+@font-face {
+  font-family: "qcf_p22";
+  src: url("/public/font/mushaf/QCF_P022.TTF");
+}
+@font-face {
+  font-family: "qcf_p23";
+  src: url("/public/font/mushaf/QCF_P023.TTF");
+}
+@font-face {
+  font-family: "qcf_p24";
+  src: url("/public/font/mushaf/QCF_P024.TTF");
+}
+@font-face {
+  font-family: "qcf_p25";
+  src: url("/public/font/mushaf/QCF_P025.TTF");
+}
+@font-face {
+  font-family: "qcf_p26";
+  src: url("/public/font/mushaf/QCF_P026.TTF");
+}
+@font-face {
+  font-family: "qcf_p27";
+  src: url("/public/font/mushaf/QCF_P027.TTF");
+}
+@font-face {
+  font-family: "qcf_p28";
+  src: url("/public/font/mushaf/QCF_P028.TTF");
+}
+@font-face {
+  font-family: "qcf_p29";
+  src: url("/public/font/mushaf/QCF_P029.TTF");
+}
+@font-face {
+  font-family: "qcf_p30";
+  src: url("/public/font/mushaf/QCF_P030.TTF");
+}
+@font-face {
+  font-family: "qcf_p31";
+  src: url("/public/font/mushaf/QCF_P031.TTF");
+}
+@font-face {
+  font-family: "qcf_p32";
+  src: url("/public/font/mushaf/QCF_P032.TTF");
+}
+@font-face {
+  font-family: "qcf_p33";
+  src: url("/public/font/mushaf/QCF_P033.TTF");
+}
+@font-face {
+  font-family: "qcf_p34";
+  src: url("/public/font/mushaf/QCF_P034.TTF");
+}
+@font-face {
+  font-family: "qcf_p35";
+  src: url("/public/font/mushaf/QCF_P035.TTF");
+}
+@font-face {
+  font-family: "qcf_p36";
+  src: url("/public/font/mushaf/QCF_P036.TTF");
+}
+@font-face {
+  font-family: "qcf_p37";
+  src: url("/public/font/mushaf/QCF_P037.TTF");
+}
+@font-face {
+  font-family: "qcf_p38";
+  src: url("/public/font/mushaf/QCF_P038.TTF");
+}
+@font-face {
+  font-family: "qcf_p39";
+  src: url("/public/font/mushaf/QCF_P039.TTF");
+}
+@font-face {
+  font-family: "qcf_p40";
+  src: url("/public/font/mushaf/QCF_P040.TTF");
+}
+@font-face {
+  font-family: "qcf_p41";
+  src: url("/public/font/mushaf/QCF_P041.TTF");
+}
+@font-face {
+  font-family: "qcf_p42";
+  src: url("/public/font/mushaf/QCF_P042.TTF");
+}
+@font-face {
+  font-family: "qcf_p43";
+  src: url("/public/font/mushaf/QCF_P043.TTF");
+}
+@font-face {
+  font-family: "qcf_p44";
+  src: url("/public/font/mushaf/QCF_P044.TTF");
+}
+@font-face {
+  font-family: "qcf_p45";
+  src: url("/public/font/mushaf/QCF_P045.TTF");
+}
+@font-face {
+  font-family: "qcf_p46";
+  src: url("/public/font/mushaf/QCF_P046.TTF");
+}
+@font-face {
+  font-family: "qcf_p47";
+  src: url("/public/font/mushaf/QCF_P047.TTF");
+}
+@font-face {
+  font-family: "qcf_p48";
+  src: url("/public/font/mushaf/QCF_P048.TTF");
+}
+@font-face {
+  font-family: "qcf_p49";
+  src: url("/public/font/mushaf/QCF_P049.TTF");
+}
+@font-face {
+  font-family: "qcf_p50";
+  src: url("/public/font/mushaf/QCF_P050.TTF");
+}
+@font-face {
+  font-family: "qcf_p51";
+  src: url("/public/font/mushaf/QCF_P051.TTF");
+}
+@font-face {
+  font-family: "qcf_p52";
+  src: url("/public/font/mushaf/QCF_P052.TTF");
+}
+@font-face {
+  font-family: "qcf_p53";
+  src: url("/public/font/mushaf/QCF_P053.TTF");
+}
+@font-face {
+  font-family: "qcf_p54";
+  src: url("/public/font/mushaf/QCF_P054.TTF");
+}
+@font-face {
+  font-family: "qcf_p55";
+  src: url("/public/font/mushaf/QCF_P055.TTF");
+}
+@font-face {
+  font-family: "qcf_p56";
+  src: url("/public/font/mushaf/QCF_P056.TTF");
+}
+@font-face {
+  font-family: "qcf_p57";
+  src: url("/public/font/mushaf/QCF_P057.TTF");
+}
+@font-face {
+  font-family: "qcf_p58";
+  src: url("/public/font/mushaf/QCF_P058.TTF");
+}
+@font-face {
+  font-family: "qcf_p59";
+  src: url("/public/font/mushaf/QCF_P059.TTF");
+}
+@font-face {
+  font-family: "qcf_p60";
+  src: url("/public/font/mushaf/QCF_P060.TTF");
+}
+@font-face {
+  font-family: "qcf_p61";
+  src: url("/public/font/mushaf/QCF_P061.TTF");
+}
+@font-face {
+  font-family: "qcf_p62";
+  src: url("/public/font/mushaf/QCF_P062.TTF");
+}
+@font-face {
+  font-family: "qcf_p63";
+  src: url("/public/font/mushaf/QCF_P063.TTF");
+}
+@font-face {
+  font-family: "qcf_p64";
+  src: url("/public/font/mushaf/QCF_P064.TTF");
+}
+@font-face {
+  font-family: "qcf_p65";
+  src: url("/public/font/mushaf/QCF_P065.TTF");
+}
+@font-face {
+  font-family: "qcf_p66";
+  src: url("/public/font/mushaf/QCF_P066.TTF");
+}
+@font-face {
+  font-family: "qcf_p67";
+  src: url("/public/font/mushaf/QCF_P067.TTF");
+}
+@font-face {
+  font-family: "qcf_p68";
+  src: url("/public/font/mushaf/QCF_P068.TTF");
+}
+@font-face {
+  font-family: "qcf_p69";
+  src: url("/public/font/mushaf/QCF_P069.TTF");
+}
+@font-face {
+  font-family: "qcf_p70";
+  src: url("/public/font/mushaf/QCF_P070.TTF");
+}
+@font-face {
+  font-family: "qcf_p71";
+  src: url("/public/font/mushaf/QCF_P071.TTF");
+}
+@font-face {
+  font-family: "qcf_p72";
+  src: url("/public/font/mushaf/QCF_P072.TTF");
+}
+@font-face {
+  font-family: "qcf_p73";
+  src: url("/public/font/mushaf/QCF_P073.TTF");
+}
+@font-face {
+  font-family: "qcf_p74";
+  src: url("/public/font/mushaf/QCF_P074.TTF");
+}
+@font-face {
+  font-family: "qcf_p75";
+  src: url("/public/font/mushaf/QCF_P075.TTF");
+}
+@font-face {
+  font-family: "qcf_p76";
+  src: url("/public/font/mushaf/QCF_P076.TTF");
+}
+@font-face {
+  font-family: "qcf_p77";
+  src: url("/public/font/mushaf/QCF_P077.TTF");
+}
+@font-face {
+  font-family: "qcf_p78";
+  src: url("/public/font/mushaf/QCF_P078.TTF");
+}
+@font-face {
+  font-family: "qcf_p79";
+  src: url("/public/font/mushaf/QCF_P079.TTF");
+}
+@font-face {
+  font-family: "qcf_p80";
+  src: url("/public/font/mushaf/QCF_P080.TTF");
+}
+@font-face {
+  font-family: "qcf_p81";
+  src: url("/public/font/mushaf/QCF_P081.TTF");
+}
+@font-face {
+  font-family: "qcf_p82";
+  src: url("/public/font/mushaf/QCF_P082.TTF");
+}
+@font-face {
+  font-family: "qcf_p83";
+  src: url("/public/font/mushaf/QCF_P083.TTF");
+}
+@font-face {
+  font-family: "qcf_p84";
+  src: url("/public/font/mushaf/QCF_P084.TTF");
+}
+@font-face {
+  font-family: "qcf_p85";
+  src: url("/public/font/mushaf/QCF_P085.TTF");
+}
+@font-face {
+  font-family: "qcf_p86";
+  src: url("/public/font/mushaf/QCF_P086.TTF");
+}
+@font-face {
+  font-family: "qcf_p87";
+  src: url("/public/font/mushaf/QCF_P087.TTF");
+}
+@font-face {
+  font-family: "qcf_p88";
+  src: url("/public/font/mushaf/QCF_P088.TTF");
+}
+@font-face {
+  font-family: "qcf_p89";
+  src: url("/public/font/mushaf/QCF_P089.TTF");
+}
+@font-face {
+  font-family: "qcf_p90";
+  src: url("/public/font/mushaf/QCF_P090.TTF");
+}
+@font-face {
+  font-family: "qcf_p91";
+  src: url("/public/font/mushaf/QCF_P091.TTF");
+}
+@font-face {
+  font-family: "qcf_p92";
+  src: url("/public/font/mushaf/QCF_P092.TTF");
+}
+@font-face {
+  font-family: "qcf_p93";
+  src: url("/public/font/mushaf/QCF_P093.TTF");
+}
+@font-face {
+  font-family: "qcf_p94";
+  src: url("/public/font/mushaf/QCF_P094.TTF");
+}
+@font-face {
+  font-family: "qcf_p95";
+  src: url("/public/font/mushaf/QCF_P095.TTF");
+}
+@font-face {
+  font-family: "qcf_p96";
+  src: url("/public/font/mushaf/QCF_P096.TTF");
+}
+@font-face {
+  font-family: "qcf_p97";
+  src: url("/public/font/mushaf/QCF_P097.TTF");
+}
+@font-face {
+  font-family: "qcf_p98";
+  src: url("/public/font/mushaf/QCF_P098.TTF");
+}
+@font-face {
+  font-family: "qcf_p99";
+  src: url("/public/font/mushaf/QCF_P099.TTF");
+}
+@font-face {
+  font-family: "qcf_p100";
+  src: url("/public/font/mushaf/QCF_P100.TTF");
+}
+@font-face {
+  font-family: "qcf_p101";
+  src: url("/public/font/mushaf/QCF_P101.TTF");
+}
+@font-face {
+  font-family: "qcf_p102";
+  src: url("/public/font/mushaf/QCF_P102.TTF");
+}
+@font-face {
+  font-family: "qcf_p103";
+  src: url("/public/font/mushaf/QCF_P103.TTF");
+}
+@font-face {
+  font-family: "qcf_p104";
+  src: url("/public/font/mushaf/QCF_P104.TTF");
+}
+@font-face {
+  font-family: "qcf_p105";
+  src: url("/public/font/mushaf/QCF_P105.TTF");
+}
+@font-face {
+  font-family: "qcf_p106";
+  src: url("/public/font/mushaf/QCF_P106.TTF");
+}
+@font-face {
+  font-family: "qcf_p107";
+  src: url("/public/font/mushaf/QCF_P107.TTF");
+}
+@font-face {
+  font-family: "qcf_p108";
+  src: url("/public/font/mushaf/QCF_P108.TTF");
+}
+@font-face {
+  font-family: "qcf_p109";
+  src: url("/public/font/mushaf/QCF_P109.TTF");
+}
+@font-face {
+  font-family: "qcf_p110";
+  src: url("/public/font/mushaf/QCF_P110.TTF");
+}
+@font-face {
+  font-family: "qcf_p111";
+  src: url("/public/font/mushaf/QCF_P111.TTF");
+}
+@font-face {
+  font-family: "qcf_p112";
+  src: url("/public/font/mushaf/QCF_P112.TTF");
+}
+@font-face {
+  font-family: "qcf_p113";
+  src: url("/public/font/mushaf/QCF_P113.TTF");
+}
+@font-face {
+  font-family: "qcf_p114";
+  src: url("/public/font/mushaf/QCF_P114.TTF");
+}
+@font-face {
+  font-family: "qcf_p115";
+  src: url("/public/font/mushaf/QCF_P115.TTF");
+}
+@font-face {
+  font-family: "qcf_p116";
+  src: url("/public/font/mushaf/QCF_P116.TTF");
+}
+@font-face {
+  font-family: "qcf_p117";
+  src: url("/public/font/mushaf/QCF_P117.TTF");
+}
+@font-face {
+  font-family: "qcf_p118";
+  src: url("/public/font/mushaf/QCF_P118.TTF");
+}
+@font-face {
+  font-family: "qcf_p119";
+  src: url("/public/font/mushaf/QCF_P119.TTF");
+}
+@font-face {
+  font-family: "qcf_p120";
+  src: url("/public/font/mushaf/QCF_P120.TTF");
+}
+@font-face {
+  font-family: "qcf_p121";
+  src: url("/public/font/mushaf/QCF_P121.TTF");
+}
+@font-face {
+  font-family: "qcf_p122";
+  src: url("/public/font/mushaf/QCF_P122.TTF");
+}
+@font-face {
+  font-family: "qcf_p123";
+  src: url("/public/font/mushaf/QCF_P123.TTF");
+}
+@font-face {
+  font-family: "qcf_p124";
+  src: url("/public/font/mushaf/QCF_P124.TTF");
+}
+@font-face {
+  font-family: "qcf_p125";
+  src: url("/public/font/mushaf/QCF_P125.TTF");
+}
+@font-face {
+  font-family: "qcf_p126";
+  src: url("/public/font/mushaf/QCF_P126.TTF");
+}
+@font-face {
+  font-family: "qcf_p127";
+  src: url("/public/font/mushaf/QCF_P127.TTF");
+}
+@font-face {
+  font-family: "qcf_p128";
+  src: url("/public/font/mushaf/QCF_P128.TTF");
+}
+@font-face {
+  font-family: "qcf_p129";
+  src: url("/public/font/mushaf/QCF_P129.TTF");
+}
+@font-face {
+  font-family: "qcf_p130";
+  src: url("/public/font/mushaf/QCF_P130.TTF");
+}
+@font-face {
+  font-family: "qcf_p131";
+  src: url("/public/font/mushaf/QCF_P131.TTF");
+}
+@font-face {
+  font-family: "qcf_p132";
+  src: url("/public/font/mushaf/QCF_P132.TTF");
+}
+@font-face {
+  font-family: "qcf_p133";
+  src: url("/public/font/mushaf/QCF_P133.TTF");
+}
+@font-face {
+  font-family: "qcf_p134";
+  src: url("/public/font/mushaf/QCF_P134.TTF");
+}
+@font-face {
+  font-family: "qcf_p135";
+  src: url("/public/font/mushaf/QCF_P135.TTF");
+}
+@font-face {
+  font-family: "qcf_p136";
+  src: url("/public/font/mushaf/QCF_P136.TTF");
+}
+@font-face {
+  font-family: "qcf_p137";
+  src: url("/public/font/mushaf/QCF_P137.TTF");
+}
+@font-face {
+  font-family: "qcf_p138";
+  src: url("/public/font/mushaf/QCF_P138.TTF");
+}
+@font-face {
+  font-family: "qcf_p139";
+  src: url("/public/font/mushaf/QCF_P139.TTF");
+}
+@font-face {
+  font-family: "qcf_p140";
+  src: url("/public/font/mushaf/QCF_P140.TTF");
+}
+@font-face {
+  font-family: "qcf_p141";
+  src: url("/public/font/mushaf/QCF_P141.TTF");
+}
+@font-face {
+  font-family: "qcf_p142";
+  src: url("/public/font/mushaf/QCF_P142.TTF");
+}
+@font-face {
+  font-family: "qcf_p143";
+  src: url("/public/font/mushaf/QCF_P143.TTF");
+}
+@font-face {
+  font-family: "qcf_p144";
+  src: url("/public/font/mushaf/QCF_P144.TTF");
+}
+@font-face {
+  font-family: "qcf_p145";
+  src: url("/public/font/mushaf/QCF_P145.TTF");
+}
+@font-face {
+  font-family: "qcf_p146";
+  src: url("/public/font/mushaf/QCF_P146.TTF");
+}
+@font-face {
+  font-family: "qcf_p147";
+  src: url("/public/font/mushaf/QCF_P147.TTF");
+}
+@font-face {
+  font-family: "qcf_p148";
+  src: url("/public/font/mushaf/QCF_P148.TTF");
+}
+@font-face {
+  font-family: "qcf_p149";
+  src: url("/public/font/mushaf/QCF_P149.TTF");
+}
+@font-face {
+  font-family: "qcf_p150";
+  src: url("/public/font/mushaf/QCF_P150.TTF");
+}
+@font-face {
+  font-family: "qcf_p151";
+  src: url("/public/font/mushaf/QCF_P151.TTF");
+}
+@font-face {
+  font-family: "qcf_p152";
+  src: url("/public/font/mushaf/QCF_P152.TTF");
+}
+@font-face {
+  font-family: "qcf_p153";
+  src: url("/public/font/mushaf/QCF_P153.TTF");
+}
+@font-face {
+  font-family: "qcf_p154";
+  src: url("/public/font/mushaf/QCF_P154.TTF");
+}
+@font-face {
+  font-family: "qcf_p155";
+  src: url("/public/font/mushaf/QCF_P155.TTF");
+}
+@font-face {
+  font-family: "qcf_p156";
+  src: url("/public/font/mushaf/QCF_P156.TTF");
+}
+@font-face {
+  font-family: "qcf_p157";
+  src: url("/public/font/mushaf/QCF_P157.TTF");
+}
+@font-face {
+  font-family: "qcf_p158";
+  src: url("/public/font/mushaf/QCF_P158.TTF");
+}
+@font-face {
+  font-family: "qcf_p159";
+  src: url("/public/font/mushaf/QCF_P159.TTF");
+}
+@font-face {
+  font-family: "qcf_p160";
+  src: url("/public/font/mushaf/QCF_P160.TTF");
+}
+@font-face {
+  font-family: "qcf_p161";
+  src: url("/public/font/mushaf/QCF_P161.TTF");
+}
+@font-face {
+  font-family: "qcf_p162";
+  src: url("/public/font/mushaf/QCF_P162.TTF");
+}
+@font-face {
+  font-family: "qcf_p163";
+  src: url("/public/font/mushaf/QCF_P163.TTF");
+}
+@font-face {
+  font-family: "qcf_p164";
+  src: url("/public/font/mushaf/QCF_P164.TTF");
+}
+@font-face {
+  font-family: "qcf_p165";
+  src: url("/public/font/mushaf/QCF_P165.TTF");
+}
+@font-face {
+  font-family: "qcf_p166";
+  src: url("/public/font/mushaf/QCF_P166.TTF");
+}
+@font-face {
+  font-family: "qcf_p167";
+  src: url("/public/font/mushaf/QCF_P167.TTF");
+}
+@font-face {
+  font-family: "qcf_p168";
+  src: url("/public/font/mushaf/QCF_P168.TTF");
+}
+@font-face {
+  font-family: "qcf_p169";
+  src: url("/public/font/mushaf/QCF_P169.TTF");
+}
+@font-face {
+  font-family: "qcf_p170";
+  src: url("/public/font/mushaf/QCF_P170.TTF");
+}
+@font-face {
+  font-family: "qcf_p171";
+  src: url("/public/font/mushaf/QCF_P171.TTF");
+}
+@font-face {
+  font-family: "qcf_p172";
+  src: url("/public/font/mushaf/QCF_P172.TTF");
+}
+@font-face {
+  font-family: "qcf_p173";
+  src: url("/public/font/mushaf/QCF_P173.TTF");
+}
+@font-face {
+  font-family: "qcf_p174";
+  src: url("/public/font/mushaf/QCF_P174.TTF");
+}
+@font-face {
+  font-family: "qcf_p175";
+  src: url("/public/font/mushaf/QCF_P175.TTF");
+}
+@font-face {
+  font-family: "qcf_p176";
+  src: url("/public/font/mushaf/QCF_P176.TTF");
+}
+@font-face {
+  font-family: "qcf_p177";
+  src: url("/public/font/mushaf/QCF_P177.TTF");
+}
+@font-face {
+  font-family: "qcf_p178";
+  src: url("/public/font/mushaf/QCF_P178.TTF");
+}
+@font-face {
+  font-family: "qcf_p179";
+  src: url("/public/font/mushaf/QCF_P179.TTF");
+}
+@font-face {
+  font-family: "qcf_p180";
+  src: url("/public/font/mushaf/QCF_P180.TTF");
+}
+@font-face {
+  font-family: "qcf_p181";
+  src: url("/public/font/mushaf/QCF_P181.TTF");
+}
+@font-face {
+  font-family: "qcf_p182";
+  src: url("/public/font/mushaf/QCF_P182.TTF");
+}
+@font-face {
+  font-family: "qcf_p183";
+  src: url("/public/font/mushaf/QCF_P183.TTF");
+}
+@font-face {
+  font-family: "qcf_p184";
+  src: url("/public/font/mushaf/QCF_P184.TTF");
+}
+@font-face {
+  font-family: "qcf_p185";
+  src: url("/public/font/mushaf/QCF_P185.TTF");
+}
+@font-face {
+  font-family: "qcf_p186";
+  src: url("/public/font/mushaf/QCF_P186.TTF");
+}
+@font-face {
+  font-family: "qcf_p187";
+  src: url("/public/font/mushaf/QCF_P187.TTF");
+}
+@font-face {
+  font-family: "qcf_p188";
+  src: url("/public/font/mushaf/QCF_P188.TTF");
+}
+@font-face {
+  font-family: "qcf_p189";
+  src: url("/public/font/mushaf/QCF_P189.TTF");
+}
+@font-face {
+  font-family: "qcf_p190";
+  src: url("/public/font/mushaf/QCF_P190.TTF");
+}
+@font-face {
+  font-family: "qcf_p191";
+  src: url("/public/font/mushaf/QCF_P191.TTF");
+}
+@font-face {
+  font-family: "qcf_p192";
+  src: url("/public/font/mushaf/QCF_P192.TTF");
+}
+@font-face {
+  font-family: "qcf_p193";
+  src: url("/public/font/mushaf/QCF_P193.TTF");
+}
+@font-face {
+  font-family: "qcf_p194";
+  src: url("/public/font/mushaf/QCF_P194.TTF");
+}
+@font-face {
+  font-family: "qcf_p195";
+  src: url("/public/font/mushaf/QCF_P195.TTF");
+}
+@font-face {
+  font-family: "qcf_p196";
+  src: url("/public/font/mushaf/QCF_P196.TTF");
+}
+@font-face {
+  font-family: "qcf_p197";
+  src: url("/public/font/mushaf/QCF_P197.TTF");
+}
+@font-face {
+  font-family: "qcf_p198";
+  src: url("/public/font/mushaf/QCF_P198.TTF");
+}
+@font-face {
+  font-family: "qcf_p199";
+  src: url("/public/font/mushaf/QCF_P199.TTF");
+}
+@font-face {
+  font-family: "qcf_p200";
+  src: url("/public/font/mushaf/QCF_P200.TTF");
+}
+@font-face {
+  font-family: "qcf_p201";
+  src: url("/public/font/mushaf/QCF_P201.TTF");
+}
+@font-face {
+  font-family: "qcf_p202";
+  src: url("/public/font/mushaf/QCF_P202.TTF");
+}
+@font-face {
+  font-family: "qcf_p203";
+  src: url("/public/font/mushaf/QCF_P203.TTF");
+}
+@font-face {
+  font-family: "qcf_p204";
+  src: url("/public/font/mushaf/QCF_P204.TTF");
+}
+@font-face {
+  font-family: "qcf_p205";
+  src: url("/public/font/mushaf/QCF_P205.TTF");
+}
+@font-face {
+  font-family: "qcf_p206";
+  src: url("/public/font/mushaf/QCF_P206.TTF");
+}
+@font-face {
+  font-family: "qcf_p207";
+  src: url("/public/font/mushaf/QCF_P207.TTF");
+}
+@font-face {
+  font-family: "qcf_p208";
+  src: url("/public/font/mushaf/QCF_P208.TTF");
+}
+@font-face {
+  font-family: "qcf_p209";
+  src: url("/public/font/mushaf/QCF_P209.TTF");
+}
+@font-face {
+  font-family: "qcf_p210";
+  src: url("/public/font/mushaf/QCF_P210.TTF");
+}
+@font-face {
+  font-family: "qcf_p211";
+  src: url("/public/font/mushaf/QCF_P211.TTF");
+}
+@font-face {
+  font-family: "qcf_p212";
+  src: url("/public/font/mushaf/QCF_P212.TTF");
+}
+@font-face {
+  font-family: "qcf_p213";
+  src: url("/public/font/mushaf/QCF_P213.TTF");
+}
+@font-face {
+  font-family: "qcf_p214";
+  src: url("/public/font/mushaf/QCF_P214.TTF");
+}
+@font-face {
+  font-family: "qcf_p215";
+  src: url("/public/font/mushaf/QCF_P215.TTF");
+}
+@font-face {
+  font-family: "qcf_p216";
+  src: url("/public/font/mushaf/QCF_P216.TTF");
+}
+@font-face {
+  font-family: "qcf_p217";
+  src: url("/public/font/mushaf/QCF_P217.TTF");
+}
+@font-face {
+  font-family: "qcf_p218";
+  src: url("/public/font/mushaf/QCF_P218.TTF");
+}
+@font-face {
+  font-family: "qcf_p219";
+  src: url("/public/font/mushaf/QCF_P219.TTF");
+}
+@font-face {
+  font-family: "qcf_p220";
+  src: url("/public/font/mushaf/QCF_P220.TTF");
+}
+@font-face {
+  font-family: "qcf_p221";
+  src: url("/public/font/mushaf/QCF_P221.TTF");
+}
+@font-face {
+  font-family: "qcf_p222";
+  src: url("/public/font/mushaf/QCF_P222.TTF");
+}
+@font-face {
+  font-family: "qcf_p223";
+  src: url("/public/font/mushaf/QCF_P223.TTF");
+}
+@font-face {
+  font-family: "qcf_p224";
+  src: url("/public/font/mushaf/QCF_P224.TTF");
+}
+@font-face {
+  font-family: "qcf_p225";
+  src: url("/public/font/mushaf/QCF_P225.TTF");
+}
+@font-face {
+  font-family: "qcf_p226";
+  src: url("/public/font/mushaf/QCF_P226.TTF");
+}
+@font-face {
+  font-family: "qcf_p227";
+  src: url("/public/font/mushaf/QCF_P227.TTF");
+}
+@font-face {
+  font-family: "qcf_p228";
+  src: url("/public/font/mushaf/QCF_P228.TTF");
+}
+@font-face {
+  font-family: "qcf_p229";
+  src: url("/public/font/mushaf/QCF_P229.TTF");
+}
+@font-face {
+  font-family: "qcf_p230";
+  src: url("/public/font/mushaf/QCF_P230.TTF");
+}
+@font-face {
+  font-family: "qcf_p231";
+  src: url("/public/font/mushaf/QCF_P231.TTF");
+}
+@font-face {
+  font-family: "qcf_p232";
+  src: url("/public/font/mushaf/QCF_P232.TTF");
+}
+@font-face {
+  font-family: "qcf_p233";
+  src: url("/public/font/mushaf/QCF_P233.TTF");
+}
+@font-face {
+  font-family: "qcf_p234";
+  src: url("/public/font/mushaf/QCF_P234.TTF");
+}
+@font-face {
+  font-family: "qcf_p235";
+  src: url("/public/font/mushaf/QCF_P235.TTF");
+}
+@font-face {
+  font-family: "qcf_p236";
+  src: url("/public/font/mushaf/QCF_P236.TTF");
+}
+@font-face {
+  font-family: "qcf_p237";
+  src: url("/public/font/mushaf/QCF_P237.TTF");
+}
+@font-face {
+  font-family: "qcf_p238";
+  src: url("/public/font/mushaf/QCF_P238.TTF");
+}
+@font-face {
+  font-family: "qcf_p239";
+  src: url("/public/font/mushaf/QCF_P239.TTF");
+}
+@font-face {
+  font-family: "qcf_p240";
+  src: url("/public/font/mushaf/QCF_P240.TTF");
+}
+@font-face {
+  font-family: "qcf_p241";
+  src: url("/public/font/mushaf/QCF_P241.TTF");
+}
+@font-face {
+  font-family: "qcf_p242";
+  src: url("/public/font/mushaf/QCF_P242.TTF");
+}
+@font-face {
+  font-family: "qcf_p243";
+  src: url("/public/font/mushaf/QCF_P243.TTF");
+}
+@font-face {
+  font-family: "qcf_p244";
+  src: url("/public/font/mushaf/QCF_P244.TTF");
+}
+@font-face {
+  font-family: "qcf_p245";
+  src: url("/public/font/mushaf/QCF_P245.TTF");
+}
+@font-face {
+  font-family: "qcf_p246";
+  src: url("/public/font/mushaf/QCF_P246.TTF");
+}
+@font-face {
+  font-family: "qcf_p247";
+  src: url("/public/font/mushaf/QCF_P247.TTF");
+}
+@font-face {
+  font-family: "qcf_p248";
+  src: url("/public/font/mushaf/QCF_P248.TTF");
+}
+@font-face {
+  font-family: "qcf_p249";
+  src: url("/public/font/mushaf/QCF_P249.TTF");
+}
+@font-face {
+  font-family: "qcf_p250";
+  src: url("/public/font/mushaf/QCF_P250.TTF");
+}
+@font-face {
+  font-family: "qcf_p251";
+  src: url("/public/font/mushaf/QCF_P251.TTF");
+}
+@font-face {
+  font-family: "qcf_p252";
+  src: url("/public/font/mushaf/QCF_P252.TTF");
+}
+@font-face {
+  font-family: "qcf_p253";
+  src: url("/public/font/mushaf/QCF_P253.TTF");
+}
+@font-face {
+  font-family: "qcf_p254";
+  src: url("/public/font/mushaf/QCF_P254.TTF");
+}
+@font-face {
+  font-family: "qcf_p255";
+  src: url("/public/font/mushaf/QCF_P255.TTF");
+}
+@font-face {
+  font-family: "qcf_p256";
+  src: url("/public/font/mushaf/QCF_P256.TTF");
+}
+@font-face {
+  font-family: "qcf_p257";
+  src: url("/public/font/mushaf/QCF_P257.TTF");
+}
+@font-face {
+  font-family: "qcf_p258";
+  src: url("/public/font/mushaf/QCF_P258.TTF");
+}
+@font-face {
+  font-family: "qcf_p259";
+  src: url("/public/font/mushaf/QCF_P259.TTF");
+}
+@font-face {
+  font-family: "qcf_p260";
+  src: url("/public/font/mushaf/QCF_P260.TTF");
+}
+@font-face {
+  font-family: "qcf_p261";
+  src: url("/public/font/mushaf/QCF_P261.TTF");
+}
+@font-face {
+  font-family: "qcf_p262";
+  src: url("/public/font/mushaf/QCF_P262.TTF");
+}
+@font-face {
+  font-family: "qcf_p263";
+  src: url("/public/font/mushaf/QCF_P263.TTF");
+}
+@font-face {
+  font-family: "qcf_p264";
+  src: url("/public/font/mushaf/QCF_P264.TTF");
+}
+@font-face {
+  font-family: "qcf_p265";
+  src: url("/public/font/mushaf/QCF_P265.TTF");
+}
+@font-face {
+  font-family: "qcf_p266";
+  src: url("/public/font/mushaf/QCF_P266.TTF");
+}
+@font-face {
+  font-family: "qcf_p267";
+  src: url("/public/font/mushaf/QCF_P267.TTF");
+}
+@font-face {
+  font-family: "qcf_p268";
+  src: url("/public/font/mushaf/QCF_P268.TTF");
+}
+@font-face {
+  font-family: "qcf_p269";
+  src: url("/public/font/mushaf/QCF_P269.TTF");
+}
+@font-face {
+  font-family: "qcf_p270";
+  src: url("/public/font/mushaf/QCF_P270.TTF");
+}
+@font-face {
+  font-family: "qcf_p271";
+  src: url("/public/font/mushaf/QCF_P271.TTF");
+}
+@font-face {
+  font-family: "qcf_p272";
+  src: url("/public/font/mushaf/QCF_P272.TTF");
+}
+@font-face {
+  font-family: "qcf_p273";
+  src: url("/public/font/mushaf/QCF_P273.TTF");
+}
+@font-face {
+  font-family: "qcf_p274";
+  src: url("/public/font/mushaf/QCF_P274.TTF");
+}
+@font-face {
+  font-family: "qcf_p275";
+  src: url("/public/font/mushaf/QCF_P275.TTF");
+}
+@font-face {
+  font-family: "qcf_p276";
+  src: url("/public/font/mushaf/QCF_P276.TTF");
+}
+@font-face {
+  font-family: "qcf_p277";
+  src: url("/public/font/mushaf/QCF_P277.TTF");
+}
+@font-face {
+  font-family: "qcf_p278";
+  src: url("/public/font/mushaf/QCF_P278.TTF");
+}
+@font-face {
+  font-family: "qcf_p279";
+  src: url("/public/font/mushaf/QCF_P279.TTF");
+}
+@font-face {
+  font-family: "qcf_p280";
+  src: url("/public/font/mushaf/QCF_P280.TTF");
+}
+@font-face {
+  font-family: "qcf_p281";
+  src: url("/public/font/mushaf/QCF_P281.TTF");
+}
+@font-face {
+  font-family: "qcf_p282";
+  src: url("/public/font/mushaf/QCF_P282.TTF");
+}
+@font-face {
+  font-family: "qcf_p283";
+  src: url("/public/font/mushaf/QCF_P283.TTF");
+}
+@font-face {
+  font-family: "qcf_p284";
+  src: url("/public/font/mushaf/QCF_P284.TTF");
+}
+@font-face {
+  font-family: "qcf_p285";
+  src: url("/public/font/mushaf/QCF_P285.TTF");
+}
+@font-face {
+  font-family: "qcf_p286";
+  src: url("/public/font/mushaf/QCF_P286.TTF");
+}
+@font-face {
+  font-family: "qcf_p287";
+  src: url("/public/font/mushaf/QCF_P287.TTF");
+}
+@font-face {
+  font-family: "qcf_p288";
+  src: url("/public/font/mushaf/QCF_P288.TTF");
+}
+@font-face {
+  font-family: "qcf_p289";
+  src: url("/public/font/mushaf/QCF_P289.TTF");
+}
+@font-face {
+  font-family: "qcf_p290";
+  src: url("/public/font/mushaf/QCF_P290.TTF");
+}
+@font-face {
+  font-family: "qcf_p291";
+  src: url("/public/font/mushaf/QCF_P291.TTF");
+}
+@font-face {
+  font-family: "qcf_p292";
+  src: url("/public/font/mushaf/QCF_P292.TTF");
+}
+@font-face {
+  font-family: "qcf_p293";
+  src: url("/public/font/mushaf/QCF_P293.TTF");
+}
+@font-face {
+  font-family: "qcf_p294";
+  src: url("/public/font/mushaf/QCF_P294.TTF");
+}
+@font-face {
+  font-family: "qcf_p295";
+  src: url("/public/font/mushaf/QCF_P295.TTF");
+}
+@font-face {
+  font-family: "qcf_p296";
+  src: url("/public/font/mushaf/QCF_P296.TTF");
+}
+@font-face {
+  font-family: "qcf_p297";
+  src: url("/public/font/mushaf/QCF_P297.TTF");
+}
+@font-face {
+  font-family: "qcf_p298";
+  src: url("/public/font/mushaf/QCF_P298.TTF");
+}
+@font-face {
+  font-family: "qcf_p299";
+  src: url("/public/font/mushaf/QCF_P299.TTF");
+}
+@font-face {
+  font-family: "qcf_p300";
+  src: url("/public/font/mushaf/QCF_P300.TTF");
+}
+@font-face {
+  font-family: "qcf_p301";
+  src: url("/public/font/mushaf/QCF_P301.TTF");
+}
+@font-face {
+  font-family: "qcf_p302";
+  src: url("/public/font/mushaf/QCF_P302.TTF");
+}
+@font-face {
+  font-family: "qcf_p303";
+  src: url("/public/font/mushaf/QCF_P303.TTF");
+}
+@font-face {
+  font-family: "qcf_p304";
+  src: url("/public/font/mushaf/QCF_P304.TTF");
+}
+@font-face {
+  font-family: "qcf_p305";
+  src: url("/public/font/mushaf/QCF_P305.TTF");
+}
+@font-face {
+  font-family: "qcf_p306";
+  src: url("/public/font/mushaf/QCF_P306.TTF");
+}
+@font-face {
+  font-family: "qcf_p307";
+  src: url("/public/font/mushaf/QCF_P307.TTF");
+}
+@font-face {
+  font-family: "qcf_p308";
+  src: url("/public/font/mushaf/QCF_P308.TTF");
+}
+@font-face {
+  font-family: "qcf_p309";
+  src: url("/public/font/mushaf/QCF_P309.TTF");
+}
+@font-face {
+  font-family: "qcf_p310";
+  src: url("/public/font/mushaf/QCF_P310.TTF");
+}
+@font-face {
+  font-family: "qcf_p311";
+  src: url("/public/font/mushaf/QCF_P311.TTF");
+}
+@font-face {
+  font-family: "qcf_p312";
+  src: url("/public/font/mushaf/QCF_P312.TTF");
+}
+@font-face {
+  font-family: "qcf_p313";
+  src: url("/public/font/mushaf/QCF_P313.TTF");
+}
+@font-face {
+  font-family: "qcf_p314";
+  src: url("/public/font/mushaf/QCF_P314.TTF");
+}
+@font-face {
+  font-family: "qcf_p315";
+  src: url("/public/font/mushaf/QCF_P315.TTF");
+}
+@font-face {
+  font-family: "qcf_p316";
+  src: url("/public/font/mushaf/QCF_P316.TTF");
+}
+@font-face {
+  font-family: "qcf_p317";
+  src: url("/public/font/mushaf/QCF_P317.TTF");
+}
+@font-face {
+  font-family: "qcf_p318";
+  src: url("/public/font/mushaf/QCF_P318.TTF");
+}
+@font-face {
+  font-family: "qcf_p319";
+  src: url("/public/font/mushaf/QCF_P319.TTF");
+}
+@font-face {
+  font-family: "qcf_p320";
+  src: url("/public/font/mushaf/QCF_P320.TTF");
+}
+@font-face {
+  font-family: "qcf_p321";
+  src: url("/public/font/mushaf/QCF_P321.TTF");
+}
+@font-face {
+  font-family: "qcf_p322";
+  src: url("/public/font/mushaf/QCF_P322.TTF");
+}
+@font-face {
+  font-family: "qcf_p323";
+  src: url("/public/font/mushaf/QCF_P323.TTF");
+}
+@font-face {
+  font-family: "qcf_p324";
+  src: url("/public/font/mushaf/QCF_P324.TTF");
+}
+@font-face {
+  font-family: "qcf_p325";
+  src: url("/public/font/mushaf/QCF_P325.TTF");
+}
+@font-face {
+  font-family: "qcf_p326";
+  src: url("/public/font/mushaf/QCF_P326.TTF");
+}
+@font-face {
+  font-family: "qcf_p327";
+  src: url("/public/font/mushaf/QCF_P327.TTF");
+}
+@font-face {
+  font-family: "qcf_p328";
+  src: url("/public/font/mushaf/QCF_P328.TTF");
+}
+@font-face {
+  font-family: "qcf_p329";
+  src: url("/public/font/mushaf/QCF_P329.TTF");
+}
+@font-face {
+  font-family: "qcf_p330";
+  src: url("/public/font/mushaf/QCF_P330.TTF");
+}
+@font-face {
+  font-family: "qcf_p331";
+  src: url("/public/font/mushaf/QCF_P331.TTF");
+}
+@font-face {
+  font-family: "qcf_p332";
+  src: url("/public/font/mushaf/QCF_P332.TTF");
+}
+@font-face {
+  font-family: "qcf_p333";
+  src: url("/public/font/mushaf/QCF_P333.TTF");
+}
+@font-face {
+  font-family: "qcf_p334";
+  src: url("/public/font/mushaf/QCF_P334.TTF");
+}
+@font-face {
+  font-family: "qcf_p335";
+  src: url("/public/font/mushaf/QCF_P335.TTF");
+}
+@font-face {
+  font-family: "qcf_p336";
+  src: url("/public/font/mushaf/QCF_P336.TTF");
+}
+@font-face {
+  font-family: "qcf_p337";
+  src: url("/public/font/mushaf/QCF_P337.TTF");
+}
+@font-face {
+  font-family: "qcf_p338";
+  src: url("/public/font/mushaf/QCF_P338.TTF");
+}
+@font-face {
+  font-family: "qcf_p339";
+  src: url("/public/font/mushaf/QCF_P339.TTF");
+}
+@font-face {
+  font-family: "qcf_p340";
+  src: url("/public/font/mushaf/QCF_P340.TTF");
+}
+@font-face {
+  font-family: "qcf_p341";
+  src: url("/public/font/mushaf/QCF_P341.TTF");
+}
+@font-face {
+  font-family: "qcf_p342";
+  src: url("/public/font/mushaf/QCF_P342.TTF");
+}
+@font-face {
+  font-family: "qcf_p343";
+  src: url("/public/font/mushaf/QCF_P343.TTF");
+}
+@font-face {
+  font-family: "qcf_p344";
+  src: url("/public/font/mushaf/QCF_P344.TTF");
+}
+@font-face {
+  font-family: "qcf_p345";
+  src: url("/public/font/mushaf/QCF_P345.TTF");
+}
+@font-face {
+  font-family: "qcf_p346";
+  src: url("/public/font/mushaf/QCF_P346.TTF");
+}
+@font-face {
+  font-family: "qcf_p347";
+  src: url("/public/font/mushaf/QCF_P347.TTF");
+}
+@font-face {
+  font-family: "qcf_p348";
+  src: url("/public/font/mushaf/QCF_P348.TTF");
+}
+@font-face {
+  font-family: "qcf_p349";
+  src: url("/public/font/mushaf/QCF_P349.TTF");
+}
+@font-face {
+  font-family: "qcf_p350";
+  src: url("/public/font/mushaf/QCF_P350.TTF");
+}
+@font-face {
+  font-family: "qcf_p351";
+  src: url("/public/font/mushaf/QCF_P351.TTF");
+}
+@font-face {
+  font-family: "qcf_p352";
+  src: url("/public/font/mushaf/QCF_P352.TTF");
+}
+@font-face {
+  font-family: "qcf_p353";
+  src: url("/public/font/mushaf/QCF_P353.TTF");
+}
+@font-face {
+  font-family: "qcf_p354";
+  src: url("/public/font/mushaf/QCF_P354.TTF");
+}
+@font-face {
+  font-family: "qcf_p355";
+  src: url("/public/font/mushaf/QCF_P355.TTF");
+}
+@font-face {
+  font-family: "qcf_p356";
+  src: url("/public/font/mushaf/QCF_P356.TTF");
+}
+@font-face {
+  font-family: "qcf_p357";
+  src: url("/public/font/mushaf/QCF_P357.TTF");
+}
+@font-face {
+  font-family: "qcf_p358";
+  src: url("/public/font/mushaf/QCF_P358.TTF");
+}
+@font-face {
+  font-family: "qcf_p359";
+  src: url("/public/font/mushaf/QCF_P359.TTF");
+}
+@font-face {
+  font-family: "qcf_p360";
+  src: url("/public/font/mushaf/QCF_P360.TTF");
+}
+@font-face {
+  font-family: "qcf_p361";
+  src: url("/public/font/mushaf/QCF_P361.TTF");
+}
+@font-face {
+  font-family: "qcf_p362";
+  src: url("/public/font/mushaf/QCF_P362.TTF");
+}
+@font-face {
+  font-family: "qcf_p363";
+  src: url("/public/font/mushaf/QCF_P363.TTF");
+}
+@font-face {
+  font-family: "qcf_p364";
+  src: url("/public/font/mushaf/QCF_P364.TTF");
+}
+@font-face {
+  font-family: "qcf_p365";
+  src: url("/public/font/mushaf/QCF_P365.TTF");
+}
+@font-face {
+  font-family: "qcf_p366";
+  src: url("/public/font/mushaf/QCF_P366.TTF");
+}
+@font-face {
+  font-family: "qcf_p367";
+  src: url("/public/font/mushaf/QCF_P367.TTF");
+}
+@font-face {
+  font-family: "qcf_p368";
+  src: url("/public/font/mushaf/QCF_P368.TTF");
+}
+@font-face {
+  font-family: "qcf_p369";
+  src: url("/public/font/mushaf/QCF_P369.TTF");
+}
+@font-face {
+  font-family: "qcf_p370";
+  src: url("/public/font/mushaf/QCF_P370.TTF");
+}
+@font-face {
+  font-family: "qcf_p371";
+  src: url("/public/font/mushaf/QCF_P371.TTF");
+}
+@font-face {
+  font-family: "qcf_p372";
+  src: url("/public/font/mushaf/QCF_P372.TTF");
+}
+@font-face {
+  font-family: "qcf_p373";
+  src: url("/public/font/mushaf/QCF_P373.TTF");
+}
+@font-face {
+  font-family: "qcf_p374";
+  src: url("/public/font/mushaf/QCF_P374.TTF");
+}
+@font-face {
+  font-family: "qcf_p375";
+  src: url("/public/font/mushaf/QCF_P375.TTF");
+}
+@font-face {
+  font-family: "qcf_p376";
+  src: url("/public/font/mushaf/QCF_P376.TTF");
+}
+@font-face {
+  font-family: "qcf_p377";
+  src: url("/public/font/mushaf/QCF_P377.TTF");
+}
+@font-face {
+  font-family: "qcf_p378";
+  src: url("/public/font/mushaf/QCF_P378.TTF");
+}
+@font-face {
+  font-family: "qcf_p379";
+  src: url("/public/font/mushaf/QCF_P379.TTF");
+}
+@font-face {
+  font-family: "qcf_p380";
+  src: url("/public/font/mushaf/QCF_P380.TTF");
+}
+@font-face {
+  font-family: "qcf_p381";
+  src: url("/public/font/mushaf/QCF_P381.TTF");
+}
+@font-face {
+  font-family: "qcf_p382";
+  src: url("/public/font/mushaf/QCF_P382.TTF");
+}
+@font-face {
+  font-family: "qcf_p383";
+  src: url("/public/font/mushaf/QCF_P383.TTF");
+}
+@font-face {
+  font-family: "qcf_p384";
+  src: url("/public/font/mushaf/QCF_P384.TTF");
+}
+@font-face {
+  font-family: "qcf_p385";
+  src: url("/public/font/mushaf/QCF_P385.TTF");
+}
+@font-face {
+  font-family: "qcf_p386";
+  src: url("/public/font/mushaf/QCF_P386.TTF");
+}
+@font-face {
+  font-family: "qcf_p387";
+  src: url("/public/font/mushaf/QCF_P387.TTF");
+}
+@font-face {
+  font-family: "qcf_p388";
+  src: url("/public/font/mushaf/QCF_P388.TTF");
+}
+@font-face {
+  font-family: "qcf_p389";
+  src: url("/public/font/mushaf/QCF_P389.TTF");
+}
+@font-face {
+  font-family: "qcf_p390";
+  src: url("/public/font/mushaf/QCF_P390.TTF");
+}
+@font-face {
+  font-family: "qcf_p391";
+  src: url("/public/font/mushaf/QCF_P391.TTF");
+}
+@font-face {
+  font-family: "qcf_p392";
+  src: url("/public/font/mushaf/QCF_P392.TTF");
+}
+@font-face {
+  font-family: "qcf_p393";
+  src: url("/public/font/mushaf/QCF_P393.TTF");
+}
+@font-face {
+  font-family: "qcf_p394";
+  src: url("/public/font/mushaf/QCF_P394.TTF");
+}
+@font-face {
+  font-family: "qcf_p395";
+  src: url("/public/font/mushaf/QCF_P395.TTF");
+}
+@font-face {
+  font-family: "qcf_p396";
+  src: url("/public/font/mushaf/QCF_P396.TTF");
+}
+@font-face {
+  font-family: "qcf_p397";
+  src: url("/public/font/mushaf/QCF_P397.TTF");
+}
+@font-face {
+  font-family: "qcf_p398";
+  src: url("/public/font/mushaf/QCF_P398.TTF");
+}
+@font-face {
+  font-family: "qcf_p399";
+  src: url("/public/font/mushaf/QCF_P399.TTF");
+}
+@font-face {
+  font-family: "qcf_p400";
+  src: url("/public/font/mushaf/QCF_P400.TTF");
+}
+@font-face {
+  font-family: "qcf_p401";
+  src: url("/public/font/mushaf/QCF_P401.TTF");
+}
+@font-face {
+  font-family: "qcf_p402";
+  src: url("/public/font/mushaf/QCF_P402.TTF");
+}
+@font-face {
+  font-family: "qcf_p403";
+  src: url("/public/font/mushaf/QCF_P403.TTF");
+}
+@font-face {
+  font-family: "qcf_p404";
+  src: url("/public/font/mushaf/QCF_P404.TTF");
+}
+@font-face {
+  font-family: "qcf_p405";
+  src: url("/public/font/mushaf/QCF_P405.TTF");
+}
+@font-face {
+  font-family: "qcf_p406";
+  src: url("/public/font/mushaf/QCF_P406.TTF");
+}
+@font-face {
+  font-family: "qcf_p407";
+  src: url("/public/font/mushaf/QCF_P407.TTF");
+}
+@font-face {
+  font-family: "qcf_p408";
+  src: url("/public/font/mushaf/QCF_P408.TTF");
+}
+@font-face {
+  font-family: "qcf_p409";
+  src: url("/public/font/mushaf/QCF_P409.TTF");
+}
+@font-face {
+  font-family: "qcf_p410";
+  src: url("/public/font/mushaf/QCF_P410.TTF");
+}
+@font-face {
+  font-family: "qcf_p411";
+  src: url("/public/font/mushaf/QCF_P411.TTF");
+}
+@font-face {
+  font-family: "qcf_p412";
+  src: url("/public/font/mushaf/QCF_P412.TTF");
+}
+@font-face {
+  font-family: "qcf_p413";
+  src: url("/public/font/mushaf/QCF_P413.TTF");
+}
+@font-face {
+  font-family: "qcf_p414";
+  src: url("/public/font/mushaf/QCF_P414.TTF");
+}
+@font-face {
+  font-family: "qcf_p415";
+  src: url("/public/font/mushaf/QCF_P415.TTF");
+}
+@font-face {
+  font-family: "qcf_p416";
+  src: url("/public/font/mushaf/QCF_P416.TTF");
+}
+@font-face {
+  font-family: "qcf_p417";
+  src: url("/public/font/mushaf/QCF_P417.TTF");
+}
+@font-face {
+  font-family: "qcf_p418";
+  src: url("/public/font/mushaf/QCF_P418.TTF");
+}
+@font-face {
+  font-family: "qcf_p419";
+  src: url("/public/font/mushaf/QCF_P419.TTF");
+}
+@font-face {
+  font-family: "qcf_p420";
+  src: url("/public/font/mushaf/QCF_P420.TTF");
+}
+@font-face {
+  font-family: "qcf_p421";
+  src: url("/public/font/mushaf/QCF_P421.TTF");
+}
+@font-face {
+  font-family: "qcf_p422";
+  src: url("/public/font/mushaf/QCF_P422.TTF");
+}
+@font-face {
+  font-family: "qcf_p423";
+  src: url("/public/font/mushaf/QCF_P423.TTF");
+}
+@font-face {
+  font-family: "qcf_p424";
+  src: url("/public/font/mushaf/QCF_P424.TTF");
+}
+@font-face {
+  font-family: "qcf_p425";
+  src: url("/public/font/mushaf/QCF_P425.TTF");
+}
+@font-face {
+  font-family: "qcf_p426";
+  src: url("/public/font/mushaf/QCF_P426.TTF");
+}
+@font-face {
+  font-family: "qcf_p427";
+  src: url("/public/font/mushaf/QCF_P427.TTF");
+}
+@font-face {
+  font-family: "qcf_p428";
+  src: url("/public/font/mushaf/QCF_P428.TTF");
+}
+@font-face {
+  font-family: "qcf_p429";
+  src: url("/public/font/mushaf/QCF_P429.TTF");
+}
+@font-face {
+  font-family: "qcf_p430";
+  src: url("/public/font/mushaf/QCF_P430.TTF");
+}
+@font-face {
+  font-family: "qcf_p431";
+  src: url("/public/font/mushaf/QCF_P431.TTF");
+}
+@font-face {
+  font-family: "qcf_p432";
+  src: url("/public/font/mushaf/QCF_P432.TTF");
+}
+@font-face {
+  font-family: "qcf_p433";
+  src: url("/public/font/mushaf/QCF_P433.TTF");
+}
+@font-face {
+  font-family: "qcf_p434";
+  src: url("/public/font/mushaf/QCF_P434.TTF");
+}
+@font-face {
+  font-family: "qcf_p435";
+  src: url("/public/font/mushaf/QCF_P435.TTF");
+}
+@font-face {
+  font-family: "qcf_p436";
+  src: url("/public/font/mushaf/QCF_P436.TTF");
+}
+@font-face {
+  font-family: "qcf_p437";
+  src: url("/public/font/mushaf/QCF_P437.TTF");
+}
+@font-face {
+  font-family: "qcf_p438";
+  src: url("/public/font/mushaf/QCF_P438.TTF");
+}
+@font-face {
+  font-family: "qcf_p439";
+  src: url("/public/font/mushaf/QCF_P439.TTF");
+}
+@font-face {
+  font-family: "qcf_p440";
+  src: url("/public/font/mushaf/QCF_P440.TTF");
+}
+@font-face {
+  font-family: "qcf_p441";
+  src: url("/public/font/mushaf/QCF_P441.TTF");
+}
+@font-face {
+  font-family: "qcf_p442";
+  src: url("/public/font/mushaf/QCF_P442.TTF");
+}
+@font-face {
+  font-family: "qcf_p443";
+  src: url("/public/font/mushaf/QCF_P443.TTF");
+}
+@font-face {
+  font-family: "qcf_p444";
+  src: url("/public/font/mushaf/QCF_P444.TTF");
+}
+@font-face {
+  font-family: "qcf_p445";
+  src: url("/public/font/mushaf/QCF_P445.TTF");
+}
+@font-face {
+  font-family: "qcf_p446";
+  src: url("/public/font/mushaf/QCF_P446.TTF");
+}
+@font-face {
+  font-family: "qcf_p447";
+  src: url("/public/font/mushaf/QCF_P447.TTF");
+}
+@font-face {
+  font-family: "qcf_p448";
+  src: url("/public/font/mushaf/QCF_P448.TTF");
+}
+@font-face {
+  font-family: "qcf_p449";
+  src: url("/public/font/mushaf/QCF_P449.TTF");
+}
+@font-face {
+  font-family: "qcf_p450";
+  src: url("/public/font/mushaf/QCF_P450.TTF");
+}
+@font-face {
+  font-family: "qcf_p451";
+  src: url("/public/font/mushaf/QCF_P451.TTF");
+}
+@font-face {
+  font-family: "qcf_p452";
+  src: url("/public/font/mushaf/QCF_P452.TTF");
+}
+@font-face {
+  font-family: "qcf_p453";
+  src: url("/public/font/mushaf/QCF_P453.TTF");
+}
+@font-face {
+  font-family: "qcf_p454";
+  src: url("/public/font/mushaf/QCF_P454.TTF");
+}
+@font-face {
+  font-family: "qcf_p455";
+  src: url("/public/font/mushaf/QCF_P455.TTF");
+}
+@font-face {
+  font-family: "qcf_p456";
+  src: url("/public/font/mushaf/QCF_P456.TTF");
+}
+@font-face {
+  font-family: "qcf_p457";
+  src: url("/public/font/mushaf/QCF_P457.TTF");
+}
+@font-face {
+  font-family: "qcf_p458";
+  src: url("/public/font/mushaf/QCF_P458.TTF");
+}
+@font-face {
+  font-family: "qcf_p459";
+  src: url("/public/font/mushaf/QCF_P459.TTF");
+}
+@font-face {
+  font-family: "qcf_p460";
+  src: url("/public/font/mushaf/QCF_P460.TTF");
+}
+@font-face {
+  font-family: "qcf_p461";
+  src: url("/public/font/mushaf/QCF_P461.TTF");
+}
+@font-face {
+  font-family: "qcf_p462";
+  src: url("/public/font/mushaf/QCF_P462.TTF");
+}
+@font-face {
+  font-family: "qcf_p463";
+  src: url("/public/font/mushaf/QCF_P463.TTF");
+}
+@font-face {
+  font-family: "qcf_p464";
+  src: url("/public/font/mushaf/QCF_P464.TTF");
+}
+@font-face {
+  font-family: "qcf_p465";
+  src: url("/public/font/mushaf/QCF_P465.TTF");
+}
+@font-face {
+  font-family: "qcf_p466";
+  src: url("/public/font/mushaf/QCF_P466.TTF");
+}
+@font-face {
+  font-family: "qcf_p467";
+  src: url("/public/font/mushaf/QCF_P467.TTF");
+}
+@font-face {
+  font-family: "qcf_p468";
+  src: url("/public/font/mushaf/QCF_P468.TTF");
+}
+@font-face {
+  font-family: "qcf_p469";
+  src: url("/public/font/mushaf/QCF_P469.TTF");
+}
+@font-face {
+  font-family: "qcf_p470";
+  src: url("/public/font/mushaf/QCF_P470.TTF");
+}
+@font-face {
+  font-family: "qcf_p471";
+  src: url("/public/font/mushaf/QCF_P471.TTF");
+}
+@font-face {
+  font-family: "qcf_p472";
+  src: url("/public/font/mushaf/QCF_P472.TTF");
+}
+@font-face {
+  font-family: "qcf_p473";
+  src: url("/public/font/mushaf/QCF_P473.TTF");
+}
+@font-face {
+  font-family: "qcf_p474";
+  src: url("/public/font/mushaf/QCF_P474.TTF");
+}
+@font-face {
+  font-family: "qcf_p475";
+  src: url("/public/font/mushaf/QCF_P475.TTF");
+}
+@font-face {
+  font-family: "qcf_p476";
+  src: url("/public/font/mushaf/QCF_P476.TTF");
+}
+@font-face {
+  font-family: "qcf_p477";
+  src: url("/public/font/mushaf/QCF_P477.TTF");
+}
+@font-face {
+  font-family: "qcf_p478";
+  src: url("/public/font/mushaf/QCF_P478.TTF");
+}
+@font-face {
+  font-family: "qcf_p479";
+  src: url("/public/font/mushaf/QCF_P479.TTF");
+}
+@font-face {
+  font-family: "qcf_p480";
+  src: url("/public/font/mushaf/QCF_P480.TTF");
+}
+@font-face {
+  font-family: "qcf_p481";
+  src: url("/public/font/mushaf/QCF_P481.TTF");
+}
+@font-face {
+  font-family: "qcf_p482";
+  src: url("/public/font/mushaf/QCF_P482.TTF");
+}
+@font-face {
+  font-family: "qcf_p483";
+  src: url("/public/font/mushaf/QCF_P483.TTF");
+}
+@font-face {
+  font-family: "qcf_p484";
+  src: url("/public/font/mushaf/QCF_P484.TTF");
+}
+@font-face {
+  font-family: "qcf_p485";
+  src: url("/public/font/mushaf/QCF_P485.TTF");
+}
+@font-face {
+  font-family: "qcf_p486";
+  src: url("/public/font/mushaf/QCF_P486.TTF");
+}
+@font-face {
+  font-family: "qcf_p487";
+  src: url("/public/font/mushaf/QCF_P487.TTF");
+}
+@font-face {
+  font-family: "qcf_p488";
+  src: url("/public/font/mushaf/QCF_P488.TTF");
+}
+@font-face {
+  font-family: "qcf_p489";
+  src: url("/public/font/mushaf/QCF_P489.TTF");
+}
+@font-face {
+  font-family: "qcf_p490";
+  src: url("/public/font/mushaf/QCF_P490.TTF");
+}
+@font-face {
+  font-family: "qcf_p491";
+  src: url("/public/font/mushaf/QCF_P491.TTF");
+}
+@font-face {
+  font-family: "qcf_p492";
+  src: url("/public/font/mushaf/QCF_P492.TTF");
+}
+@font-face {
+  font-family: "qcf_p493";
+  src: url("/public/font/mushaf/QCF_P493.TTF");
+}
+@font-face {
+  font-family: "qcf_p494";
+  src: url("/public/font/mushaf/QCF_P494.TTF");
+}
+@font-face {
+  font-family: "qcf_p495";
+  src: url("/public/font/mushaf/QCF_P495.TTF");
+}
+@font-face {
+  font-family: "qcf_p496";
+  src: url("/public/font/mushaf/QCF_P496.TTF");
+}
+@font-face {
+  font-family: "qcf_p497";
+  src: url("/public/font/mushaf/QCF_P497.TTF");
+}
+@font-face {
+  font-family: "qcf_p498";
+  src: url("/public/font/mushaf/QCF_P498.TTF");
+}
+@font-face {
+  font-family: "qcf_p499";
+  src: url("/public/font/mushaf/QCF_P499.TTF");
+}
+@font-face {
+  font-family: "qcf_p500";
+  src: url("/public/font/mushaf/QCF_P500.TTF");
+}
+@font-face {
+  font-family: "qcf_p501";
+  src: url("/public/font/mushaf/QCF_P501.TTF");
+}
+@font-face {
+  font-family: "qcf_p502";
+  src: url("/public/font/mushaf/QCF_P502.TTF");
+}
+@font-face {
+  font-family: "qcf_p503";
+  src: url("/public/font/mushaf/QCF_P503.TTF");
+}
+@font-face {
+  font-family: "qcf_p504";
+  src: url("/public/font/mushaf/QCF_P504.TTF");
+}
+@font-face {
+  font-family: "qcf_p505";
+  src: url("/public/font/mushaf/QCF_P505.TTF");
+}
+@font-face {
+  font-family: "qcf_p506";
+  src: url("/public/font/mushaf/QCF_P506.TTF");
+}
+@font-face {
+  font-family: "qcf_p507";
+  src: url("/public/font/mushaf/QCF_P507.TTF");
+}
+@font-face {
+  font-family: "qcf_p508";
+  src: url("/public/font/mushaf/QCF_P508.TTF");
+}
+@font-face {
+  font-family: "qcf_p509";
+  src: url("/public/font/mushaf/QCF_P509.TTF");
+}
+@font-face {
+  font-family: "qcf_p510";
+  src: url("/public/font/mushaf/QCF_P510.TTF");
+}
+@font-face {
+  font-family: "qcf_p511";
+  src: url("/public/font/mushaf/QCF_P511.TTF");
+}
+@font-face {
+  font-family: "qcf_p512";
+  src: url("/public/font/mushaf/QCF_P512.TTF");
+}
+@font-face {
+  font-family: "qcf_p513";
+  src: url("/public/font/mushaf/QCF_P513.TTF");
+}
+@font-face {
+  font-family: "qcf_p514";
+  src: url("/public/font/mushaf/QCF_P514.TTF");
+}
+@font-face {
+  font-family: "qcf_p515";
+  src: url("/public/font/mushaf/QCF_P515.TTF");
+}
+@font-face {
+  font-family: "qcf_p516";
+  src: url("/public/font/mushaf/QCF_P516.TTF");
+}
+@font-face {
+  font-family: "qcf_p517";
+  src: url("/public/font/mushaf/QCF_P517.TTF");
+}
+@font-face {
+  font-family: "qcf_p518";
+  src: url("/public/font/mushaf/QCF_P518.TTF");
+}
+@font-face {
+  font-family: "qcf_p519";
+  src: url("/public/font/mushaf/QCF_P519.TTF");
+}
+@font-face {
+  font-family: "qcf_p520";
+  src: url("/public/font/mushaf/QCF_P520.TTF");
+}
+@font-face {
+  font-family: "qcf_p521";
+  src: url("/public/font/mushaf/QCF_P521.TTF");
+}
+@font-face {
+  font-family: "qcf_p522";
+  src: url("/public/font/mushaf/QCF_P522.TTF");
+}
+@font-face {
+  font-family: "qcf_p523";
+  src: url("/public/font/mushaf/QCF_P523.TTF");
+}
+@font-face {
+  font-family: "qcf_p524";
+  src: url("/public/font/mushaf/QCF_P524.TTF");
+}
+@font-face {
+  font-family: "qcf_p525";
+  src: url("/public/font/mushaf/QCF_P525.TTF");
+}
+@font-face {
+  font-family: "qcf_p526";
+  src: url("/public/font/mushaf/QCF_P526.TTF");
+}
+@font-face {
+  font-family: "qcf_p527";
+  src: url("/public/font/mushaf/QCF_P527.TTF");
+}
+@font-face {
+  font-family: "qcf_p528";
+  src: url("/public/font/mushaf/QCF_P528.TTF");
+}
+@font-face {
+  font-family: "qcf_p529";
+  src: url("/public/font/mushaf/QCF_P529.TTF");
+}
+@font-face {
+  font-family: "qcf_p530";
+  src: url("/public/font/mushaf/QCF_P530.TTF");
+}
+@font-face {
+  font-family: "qcf_p531";
+  src: url("/public/font/mushaf/QCF_P531.TTF");
+}
+@font-face {
+  font-family: "qcf_p532";
+  src: url("/public/font/mushaf/QCF_P532.TTF");
+}
+@font-face {
+  font-family: "qcf_p533";
+  src: url("/public/font/mushaf/QCF_P533.TTF");
+}
+@font-face {
+  font-family: "qcf_p534";
+  src: url("/public/font/mushaf/QCF_P534.TTF");
+}
+@font-face {
+  font-family: "qcf_p535";
+  src: url("/public/font/mushaf/QCF_P535.TTF");
+}
+@font-face {
+  font-family: "qcf_p536";
+  src: url("/public/font/mushaf/QCF_P536.TTF");
+}
+@font-face {
+  font-family: "qcf_p537";
+  src: url("/public/font/mushaf/QCF_P537.TTF");
+}
+@font-face {
+  font-family: "qcf_p538";
+  src: url("/public/font/mushaf/QCF_P538.TTF");
+}
+@font-face {
+  font-family: "qcf_p539";
+  src: url("/public/font/mushaf/QCF_P539.TTF");
+}
+@font-face {
+  font-family: "qcf_p540";
+  src: url("/public/font/mushaf/QCF_P540.TTF");
+}
+@font-face {
+  font-family: "qcf_p541";
+  src: url("/public/font/mushaf/QCF_P541.TTF");
+}
+@font-face {
+  font-family: "qcf_p542";
+  src: url("/public/font/mushaf/QCF_P542.TTF");
+}
+@font-face {
+  font-family: "qcf_p543";
+  src: url("/public/font/mushaf/QCF_P543.TTF");
+}
+@font-face {
+  font-family: "qcf_p544";
+  src: url("/public/font/mushaf/QCF_P544.TTF");
+}
+@font-face {
+  font-family: "qcf_p545";
+  src: url("/public/font/mushaf/QCF_P545.TTF");
+}
+@font-face {
+  font-family: "qcf_p546";
+  src: url("/public/font/mushaf/QCF_P546.TTF");
+}
+@font-face {
+  font-family: "qcf_p547";
+  src: url("/public/font/mushaf/QCF_P547.TTF");
+}
+@font-face {
+  font-family: "qcf_p548";
+  src: url("/public/font/mushaf/QCF_P548.TTF");
+}
+@font-face {
+  font-family: "qcf_p549";
+  src: url("/public/font/mushaf/QCF_P549.TTF");
+}
+@font-face {
+  font-family: "qcf_p560";
+  src: url("/public/font/mushaf/QCF_P560.TTF");
+}
+@font-face {
+  font-family: "qcf_p561";
+  src: url("/public/font/mushaf/QCF_P561.TTF");
+}
+@font-face {
+  font-family: "qcf_p562";
+  src: url("/public/font/mushaf/QCF_P562.TTF");
+}
+@font-face {
+  font-family: "qcf_p563";
+  src: url("/public/font/mushaf/QCF_P563.TTF");
+}
+@font-face {
+  font-family: "qcf_p564";
+  src: url("/public/font/mushaf/QCF_P564.TTF");
+}
+@font-face {
+  font-family: "qcf_p565";
+  src: url("/public/font/mushaf/QCF_P565.TTF");
+}
+@font-face {
+  font-family: "qcf_p566";
+  src: url("/public/font/mushaf/QCF_P566.TTF");
+}
+@font-face {
+  font-family: "qcf_p567";
+  src: url("/public/font/mushaf/QCF_P567.TTF");
+}
+@font-face {
+  font-family: "qcf_p568";
+  src: url("/public/font/mushaf/QCF_P568.TTF");
+}
+@font-face {
+  font-family: "qcf_p569";
+  src: url("/public/font/mushaf/QCF_P569.TTF");
+}
+@font-face {
+  font-family: "qcf_p570";
+  src: url("/public/font/mushaf/QCF_P570.TTF");
+}
+@font-face {
+  font-family: "qcf_p571";
+  src: url("/public/font/mushaf/QCF_P571.TTF");
+}
+@font-face {
+  font-family: "qcf_p572";
+  src: url("/public/font/mushaf/QCF_P572.TTF");
+}
+@font-face {
+  font-family: "qcf_p573";
+  src: url("/public/font/mushaf/QCF_P573.TTF");
+}
+@font-face {
+  font-family: "qcf_p574";
+  src: url("/public/font/mushaf/QCF_P574.TTF");
+}
+@font-face {
+  font-family: "qcf_p575";
+  src: url("/public/font/mushaf/QCF_P575.TTF");
+}
+@font-face {
+  font-family: "qcf_p576";
+  src: url("/public/font/mushaf/QCF_P576.TTF");
+}
+@font-face {
+  font-family: "qcf_p577";
+  src: url("/public/font/mushaf/QCF_P577.TTF");
+}
+@font-face {
+  font-family: "qcf_p578";
+  src: url("/public/font/mushaf/QCF_P578.TTF");
+}
+@font-face {
+  font-family: "qcf_p579";
+  src: url("/public/font/mushaf/QCF_P579.TTF");
+}
+@font-face {
+  font-family: "qcf_p580";
+  src: url("/public/font/mushaf/QCF_P580.TTF");
+}
+@font-face {
+  font-family: "qcf_p581";
+  src: url("/public/font/mushaf/QCF_P581.TTF");
+}
+@font-face {
+  font-family: "qcf_p582";
+  src: url("/public/font/mushaf/QCF_P582.TTF");
+}
+@font-face {
+  font-family: "qcf_p583";
+  src: url("/public/font/mushaf/QCF_P583.TTF");
+}
+@font-face {
+  font-family: "qcf_p584";
+  src: url("/public/font/mushaf/QCF_P584.TTF");
+}
+@font-face {
+  font-family: "qcf_p585";
+  src: url("/public/font/mushaf/QCF_P585.TTF");
+}
+@font-face {
+  font-family: "qcf_p586";
+  src: url("/public/font/mushaf/QCF_P586.TTF");
+}
+@font-face {
+  font-family: "qcf_p587";
+  src: url("/public/font/mushaf/QCF_P587.TTF");
+}
+@font-face {
+  font-family: "qcf_p588";
+  src: url("/public/font/mushaf/QCF_P588.TTF");
+}
+@font-face {
+  font-family: "qcf_p589";
+  src: url("/public/font/mushaf/QCF_P589.TTF");
+}
+@font-face {
+  font-family: "qcf_p590";
+  src: url("/public/font/mushaf/QCF_P590.TTF");
+}
+@font-face {
+  font-family: "qcf_p591";
+  src: url("/public/font/mushaf/QCF_P591.TTF");
+}
+@font-face {
+  font-family: "qcf_p592";
+  src: url("/public/font/mushaf/QCF_P592.TTF");
+}
+@font-face {
+  font-family: "qcf_p593";
+  src: url("/public/font/mushaf/QCF_P593.TTF");
+}
+@font-face {
+  font-family: "qcf_p594";
+  src: url("/public/font/mushaf/QCF_P594.TTF");
+}
+@font-face {
+  font-family: "qcf_p595";
+  src: url("/public/font/mushaf/QCF_P595.TTF");
+}
+@font-face {
+  font-family: "qcf_p596";
+  src: url("/public/font/mushaf/QCF_P596.TTF");
+}
+@font-face {
+  font-family: "qcf_p597";
+  src: url("/public/font/mushaf/QCF_P597.TTF");
+}
+@font-face {
+  font-family: "qcf_p598";
+  src: url("/public/font/mushaf/QCF_P598.TTF");
+}
+@font-face {
+  font-family: "qcf_p599";
+  src: url("/public/font/mushaf/QCF_P599.TTF");
+}
+@font-face {
+  font-family: "qcf_p600";
+  src: url("/public/font/mushaf/QCF_P600.TTF");
+}
+@font-face {
+  font-family: "qcf_p601";
+  src: url("/public/font/mushaf/QCF_P601.TTF");
+}
+@font-face {
+  font-family: "qcf_p602";
+  src: url("/public/font/mushaf/QCF_P602.TTF");
+}
+@font-face {
+  font-family: "qcf_p603";
+  src: url("/public/font/mushaf/QCF_P603.TTF");
+}
+@font-face {
+  font-family: "qcf_p604";
+  src: url("/public/font/mushaf/QCF_P604.TTF");
+}
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+

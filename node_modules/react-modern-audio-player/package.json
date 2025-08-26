@@ -1,0 +1,62 @@
+{
+  "name": "react-modern-audio-player",
+  "version": "1.4.0-rc.2",
+  "author": {
+    "name": "LYH",
+    "email": "slash9494@naver.com",
+    "url": "https://github.com/slash9494"
+  },
+  "homepage": "https://github.com/slash9494/react-modern-audio-player/",
+  "module": "dist/index.es.js",
+  "main": "dist/index.es.js",
+  "esnext": "dist/index.es.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slash9494/react-modern-audio-player.git"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "rm -rf dist && tsc && vite build",
+    "preview": "vite preview",
+    "typeCheck": "tsc --project ./tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@react-spectrum/layout": "^3.3.1",
+    "@react-spectrum/provider": "^3.4.1",
+    "@react-spectrum/theme-default": "^3.3.1",
+    "@react-spectrum/view": "^3.2.1",
+    "classnames": "^2.3.1",
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.5",
+    "wavesurfer.js": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "@types/react": "^18.0.1",
+    "@types/react-dom": "^18.0.0",
+    "@types/styled-components": "^5.1.26",
+    "@types/wavesurfer.js": "^6.0.3",
+    "@vitejs/plugin-react": "^1.0.7",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.0",
+    "vite-plugin-dts": "^1.1.0",
+    "vite-plugin-libcss": "^1.0.5"
+  },
+  "keywords": [
+    "audio",
+    "music",
+    "player",
+    "media",
+    "react",
+    "react-modern-audio-player"
+  ]
+}
