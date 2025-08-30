@@ -3,11 +3,21 @@
 import { useState, useEffect } from "react";
 import QuranVerse from "./QuranVerse";
 
-const Page = ({ params }: { params: { juz: string; quarters: string } }) => {
+interface Params {
+  juz: string;
+  quarters: string;
+}
+
+interface Props {
+  params: Params;
+}
+
+const Page = ({ params }: Props) => {
   const { juz, quarters } = params;
   const [valid, setValid] = useState(true);
 
   useEffect(() => {
+    // validate ranges
     if (Number(juz) > 30 || Number(quarters) > 4) {
       setValid(false);
     }
@@ -15,8 +25,11 @@ const Page = ({ params }: { params: { juz: string; quarters: string } }) => {
 
   return (
     <div className="mb-20 flex min-h-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
-      {/* ✅ changed "quarters" to "quarter" */}
-      <QuranVerse juz={Number(juz)} quarter={Number(quarters)} valid={valid} />
+      <QuranVerse
+        juz={Number(juz)}
+        quarter={Number(quarters)} // singular matches QuranVerse props
+        valid={valid}
+      />
     </div>
   );
 };
