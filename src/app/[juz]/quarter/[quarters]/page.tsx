@@ -1,6 +1,7 @@
 "use client";
-import QuranVerse from "./QuranVerse";
+
 import { useState, useEffect } from "react";
+import QuranVerse from "./QuranVerse";
 
 const Page = ({ params }: { params: { juz: string; quarters: string } }) => {
   const { juz, quarters } = params;
@@ -13,11 +14,9 @@ const Page = ({ params }: { params: { juz: string; quarters: string } }) => {
   }, [juz, quarters]);
 
   return (
-    <>
-      <div className="mb-20 flex min-h-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
-        <QuranVerse juz={juz} quarter={quarters} valid={valid} />
-      </div>
-    </>
+    <div className="mb-20 flex min-h-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
+      <QuranVerse juz={juz} quarters={quarters} valid={valid} />
+    </div>
   );
 };
 
