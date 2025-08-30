@@ -3,29 +3,39 @@
 import { useState, useEffect } from "react";
 import QuranVerse from "./QuranVerse";
 
-// Define the params interface
-interface Params {
-  surah: string;
-}
-
 interface Props {
-  params: Params;
+  params: Promise<{ surah: string }>;
 }
 
 const Page = ({ params }: Props) => {
-  const { surah } = params;
+  const [resolvedParams, setResolvedParams] = useState<{ surah: string } | null>(null);
   const [valid, setValid] = useState(true);
 
   useEffect(() => {
-    // Validate surah number range
-    if (Number(surah) > 114 || Number(surah) < 1) { // assuming max surah is 114
-      setValid(false);
-    }
-  }, [surah]);
+    const resolveParams = async () => {
+      const resolved = await params;
+      setResolvedParams(resolved);
+      
+      if (Number(resolved.surah) > 114 || Number(resolved.surah) < 1) {
+        setValid(false);
+      }
+    };
+    
+    resolveParams();
+  }, [params]);
+
+  if (!resolvedParams) {
+    return (
+      <div className="mb-20 flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+        Loading...
+      </div>
+    );
+  }
+
+  const { surah } = resolvedParams;
 
   return (
     <div className="mb-20 flex min-h-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
-      {/* Convert surah to number before passing to QuranVerse */}
       <QuranVerse surah={Number(surah)} valid={valid} />
     </div>
   );
