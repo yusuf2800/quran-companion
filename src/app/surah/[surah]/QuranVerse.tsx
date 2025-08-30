@@ -6,13 +6,7 @@ import { IoPlay, IoPause } from "react-icons/io5";
 import { arabic } from "./surah";
 import { eng_names } from "@/app/(homepage)/bodyData";
 
-const QuranVerse = ({
-  surah,
-  valid,
-}: {
-  surah: number;
-  valid: boolean;
-}) => {
+const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
   const router = useRouter();
   const navigate = () => router.push("/");
 
@@ -20,7 +14,7 @@ const QuranVerse = ({
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
+  const [activeAyahIndex, _setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // ✅ Stable handler for time updates
@@ -29,10 +23,8 @@ const QuranVerse = ({
     if (!audio) return;
     setCurrentTime(audio.currentTime);
     setDuration(audio.duration || 0);
-    // if you want activeAyahIndex later, compute it here
   }, []);
 
-  // ✅ Seek handler
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = Number(e.target.value);
     const audio = audioRef.current;
@@ -42,7 +34,6 @@ const QuranVerse = ({
     setCurrentTime(time);
   };
 
-  // ✅ Effect for metadata + time updates
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -69,7 +60,6 @@ const QuranVerse = ({
     setIsPlaying(!isPlaying);
   };
 
-  // ✅ Format time safely
   const formatDuration = (durationSeconds: number) => {
     if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
     const minutes = Math.floor(durationSeconds / 60);
@@ -79,7 +69,6 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  // ✅ Only return invalid screen AFTER hooks
   if (!valid) {
     return (
       <div className="flex h-screen w-screen items-center justify-center">
@@ -117,11 +106,7 @@ const QuranVerse = ({
         <div className="w-screen">
           <h1 className="font-surahName mt-5 text-center text-4xl">
             Surah{" "}
-            {surah > 10
-              ? surah > 100
-                ? surah
-                : `0${surah}`
-              : `00${surah}`}
+            {surah > 10 ? (surah > 100 ? surah : `0${surah}`) : `00${surah}`}
           </h1>
           <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
             ﷽
