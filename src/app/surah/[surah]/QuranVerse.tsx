@@ -14,7 +14,6 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [activeAyahIndex, _setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // ✅ Stable handler for time updates
@@ -117,9 +116,7 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
           {arabic[0].map((ayah, index) => (
             <div
               key={index}
-              className={`mb-6 ${
-                index === activeAyahIndex ? "bg-gray-600" : ""
-              }`}
+              className={`mb-6`}
             >
               <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
                 {ayah}
