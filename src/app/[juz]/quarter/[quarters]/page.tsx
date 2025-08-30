@@ -1,9 +1,9 @@
 "use client";
 import QuranVerse from "./QuranVerse";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
 const Page = ({ params }: { params: { juz: string; quarters: string } }) => {
-  const { juz, quarters } = use(params);
+  const { juz, quarters } = params;
   const [valid, setValid] = useState(true);
 
   useEffect(() => {
