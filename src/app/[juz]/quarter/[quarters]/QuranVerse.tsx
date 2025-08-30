@@ -2,8 +2,9 @@
 import { arabic, alafsayTimestamps, translation } from "./quran";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
+
 const QuranVerse = ({
   juz,
   quarter,
@@ -16,23 +17,28 @@ const QuranVerse = ({
   const router = useRouter();
   const navigate = () => router.push("/");
 
-  if (!valid) {
-    return (
-      <div className="flex h-screen w-screen items-center justify-center">
-        <h1 className="text-center text-2xl font-semibold text-white sm:text-4xl md:text-5xl">
-          Something Went Wrong.
-        </h1>
-      </div>
-    );
-  }
-
+  // ✅ Hooks always at the top
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Seek
+  // ✅ Stable callback for time updates
+  const handleTimeUpdate = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const t = audio.currentTime;
+    setCurrentTime(t);
+    setDuration(audio.duration || 0);
+
+    const ayahs = alafsayTimestamps[juz]?.[quarter] ?? [];
+    const idx = ayahs.findIndex((a) => t >= a.start && t < a.end);
+    setActiveAyahIndex(idx >= 0 ? idx : null);
+  }, [juz, quarter]);
+
+  // ✅ Seek handler
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = Number(e.target.value);
     const audio = audioRef.current;
@@ -46,42 +52,34 @@ const QuranVerse = ({
     setActiveAyahIndex(idx >= 0 ? idx : null);
   };
 
-  const handleTimeUpdate = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const t = audio.currentTime;
-    setCurrentTime(t);
-    setDuration(audio.duration || 0);
-
-    const ayahs = alafsayTimestamps[juz]?.[quarter] ?? [];
-    const idx = ayahs.findIndex((a) => t >= a.start && t < a.end);
-    setActiveAyahIndex(idx >= 0 ? idx : null);
-  };
-
+  // ✅ Effect for metadata + updates
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
     const onLoaded = () => setDuration(audio.duration || 0);
+
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("loadedmetadata", onLoaded);
+
     return () => {
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadedmetadata", onLoaded);
     };
-  }, [juz, quarter]);
+  }, [handleTimeUpdate]);
 
+  // ✅ Toggle play/pause
   const togglePlay = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      audioRef.current.play();
+      void audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
   };
 
+  // ✅ Format time
   const formatDuration = (durationSeconds: number) => {
     if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
     const minutes = Math.floor(durationSeconds / 60);
@@ -91,15 +89,16 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    audio.addEventListener("timeupdate", handleTimeUpdate);
-    return () => {
-      audio.removeEventListener("timeupdate", handleTimeUpdate);
-    };
-  }, []);
+  // ✅ Handle invalid case AFTER hooks
+  if (!valid) {
+    return (
+      <div className="flex h-screen w-screen items-center justify-center">
+        <h1 className="text-center text-2xl font-semibold text-white sm:text-4xl md:text-5xl">
+          Something Went Wrong.
+        </h1>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -110,7 +109,7 @@ const QuranVerse = ({
           whileInView={{ x: 0, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          onClick={() => navigate()}
+          onClick={navigate}
         >
           Quran Companion
         </motion.label>
@@ -123,6 +122,7 @@ const QuranVerse = ({
           </h1>
         </div>
       </header>
+
       <div className="mt-5 px-4 text-white sm:px-8 md:px-24">
         <div className="w-[500px]">
           <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
@@ -134,7 +134,7 @@ const QuranVerse = ({
           {arabic[juz][quarter].map((ayah, index) => (
             <div
               key={index}
-              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600" : ""} `}
+              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600" : ""}`}
             >
               <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
                 {ayah}
@@ -152,7 +152,7 @@ const QuranVerse = ({
         {/* Progress bar */}
         <input
           type="range"
-          className={`h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500`}
+          className="h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
@@ -169,6 +169,7 @@ const QuranVerse = ({
             {formatDuration(duration)}
           </span>
         </div>
+
         <div className="flex gap-x-5">
           <button
             onClick={togglePlay}

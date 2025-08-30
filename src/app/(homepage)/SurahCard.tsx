@@ -50,7 +50,7 @@ export const SurahCard = () => {
         </motion.div>
         <TabsContent value="quarters">
           <div className="mx-3 my-6 grid max-w-screen auto-rows-fr place-items-center gap-x-5 gap-y-3 md:grid-cols-2 lg:grid-cols-3">
-            {juzs.map(({ juz, name, ayah }, i) => (
+            {juzs.map(({ juz }, i) => (
               <motion.div
                 key={i}
                 className="relative flex w-[100%] flex-col gap-y-4 rounded-[6px] bg-gray-800/50 p-3 py-5 font-[700] text-white shadow-xl backdrop-blur-lg selection:bg-emerald-400 hover:outline-2 hover:outline-emerald-300"
@@ -127,7 +127,7 @@ export const SurahCard = () => {
         </TabsContent>
         <TabsContent value="juz">
           <div className="mx-3 my-6 grid max-w-screen auto-rows-fr place-items-center gap-x-5 gap-y-3 md:grid-cols-2 lg:grid-cols-3">
-            {juzs.map(({ juz, name, ayah }, i) => (
+            {juzs.map(({ juz, ayah }, i) => (
               <motion.div
                 key={i}
                 className="relative flex h-20 w-[100%] cursor-pointer rounded-[6px] bg-gray-800/50 p-3 font-[700] shadow-xl backdrop-blur-lg hover:outline-2 hover:outline-emerald-300"

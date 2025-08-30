@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
-import { arabic} from './surah';
+import { arabic } from "./surah";
 import { eng_names } from "@/app/(homepage)/bodyData";
 
 const QuranVerse = ({
@@ -16,6 +16,70 @@ const QuranVerse = ({
   const router = useRouter();
   const navigate = () => router.push("/");
 
+  // ✅ Hooks always at the top
+  const [duration, setDuration] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // ✅ Stable handler for time updates
+  const handleTimeUpdate = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    setCurrentTime(audio.currentTime);
+    setDuration(audio.duration || 0);
+    // if you want activeAyahIndex later, compute it here
+  }, []);
+
+  // ✅ Seek handler
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const time = Number(e.target.value);
+    const audio = audioRef.current;
+    if (audio) {
+      audio.currentTime = time;
+    }
+    setCurrentTime(time);
+  };
+
+  // ✅ Effect for metadata + time updates
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const onLoaded = () => setDuration(audio.duration || 0);
+
+    audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener("loadedmetadata", onLoaded);
+
+    return () => {
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+      audio.removeEventListener("loadedmetadata", onLoaded);
+    };
+  }, [handleTimeUpdate]);
+
+  // ✅ Toggle play/pause
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      void audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  // ✅ Format time safely
+  const formatDuration = (durationSeconds: number) => {
+    if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
+    const minutes = Math.floor(durationSeconds / 60);
+    const seconds = Math.floor(durationSeconds % 60)
+      .toString()
+      .padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
+
+  // ✅ Only return invalid screen AFTER hooks
   if (!valid) {
     return (
       <div className="flex h-screen w-screen items-center justify-center">
@@ -26,76 +90,6 @@ const QuranVerse = ({
     );
   }
 
-  const [duration, setDuration] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  // Seek
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const time = Number(e.target.value);
-    const audio = audioRef.current;
-    if (audio) {
-      audio.currentTime = time;
-    }
-    setCurrentTime(time);
-
-  };
-
-  const handleTimeUpdate = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const t = audio.currentTime;
-    setCurrentTime(t);
-    setDuration(audio.duration || 0);
-
-    
-  };
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const onLoaded = () => setDuration(audio.duration || 0);
-    audio.addEventListener("timeupdate", handleTimeUpdate);
-    audio.addEventListener("loadedmetadata", onLoaded);
-    return () => {
-      audio.removeEventListener("timeupdate", handleTimeUpdate);
-      audio.removeEventListener("loadedmetadata", onLoaded);
-    };
-  }, [surah]);
-
-  const togglePlay = () => {
-    if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const formatDuration = (durationSeconds: number) => {
-    if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
-    const minutes = Math.floor(durationSeconds / 60);
-    const seconds = Math.floor(durationSeconds % 60)
-      .toString()
-      .padStart(2, "0");
-    return `${minutes}:${seconds}`;
-  };
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    audio.addEventListener("timeupdate", handleTimeUpdate);
-    return () => {
-      audio.removeEventListener("timeupdate", handleTimeUpdate);
-    };
-  }, []);
-
   return (
     <>
       <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 p-4 backdrop-blur-2xl selection:bg-emerald-400">
@@ -105,7 +99,7 @@ const QuranVerse = ({
           whileInView={{ x: 0, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          onClick={() => navigate()}
+          onClick={navigate}
         >
           Quran Companion
         </motion.label>
@@ -118,9 +112,17 @@ const QuranVerse = ({
           </h1>
         </div>
       </header>
-      <div className="mt-5 px-4 text-white sm:px-8 md:px-24 justify-center flex ">
+
+      <div className="mt-5 flex justify-center px-4 text-white sm:px-8 md:px-24">
         <div className="w-screen">
-          <h1 className="font-surahName text-center mt-5 text-4xl">surah{`${surah > 10 ? `${surah > 100 ? surah : `0${surah}`}` : `00${surah}`} `}</h1>
+          <h1 className="font-surahName mt-5 text-center text-4xl">
+            Surah{" "}
+            {surah > 10
+              ? surah > 100
+                ? surah
+                : `0${surah}`
+              : `00${surah}`}
+          </h1>
           <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
             ﷽
           </h1>
@@ -130,13 +132,12 @@ const QuranVerse = ({
           {arabic[0].map((ayah, index) => (
             <div
               key={index}
-              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600" : ""} `}
+              className={`mb-6 ${
+                index === activeAyahIndex ? "bg-gray-600" : ""
+              }`}
             >
               <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
                 {ayah}
-              </p>
-              <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
-                {}
               </p>
               <div className="h-[1.5px] w-full bg-gray-600"></div>
             </div>
@@ -148,7 +149,7 @@ const QuranVerse = ({
         {/* Progress bar */}
         <input
           type="range"
-          className={`h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500`}
+          className="h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
@@ -165,6 +166,7 @@ const QuranVerse = ({
             {formatDuration(duration)}
           </span>
         </div>
+
         <div className="flex gap-x-5">
           <button
             onClick={togglePlay}
