@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
-import { FaBackward, FaForward } from "react-icons/fa6";
 const QuranVerse = ({
   juz,
   quarter,

@@ -1,9 +1,8 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { juzs, rukus, rukus1, surahs } from "./bodyData";
+import { juzs, surahs } from "./bodyData";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { quarter_names } from "../[juz]/quarter/[quarters]/quran";
 
 interface Tabs {
   name: string;

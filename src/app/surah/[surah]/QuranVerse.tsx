@@ -1,10 +1,9 @@
 "use client";
-import { alafsayTimestamps} from "../../[juz]/quarter/[quarters]/quran";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
-import { translation, arabic} from './surah';
+import { arabic} from './surah';
 import { eng_names } from "@/app/(homepage)/bodyData";
 
 const QuranVerse = ({
