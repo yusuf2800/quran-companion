@@ -124,7 +124,7 @@ const QuranVerse = ({
       </header>
 
       <div className="mt-5 px-4 text-white sm:px-8 md:px-24">
-        <div className="w-[500px]">
+        <div className="w-[500px] h-[600px] flex justify-center items-center">
           <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
             ﷽
           </h1>
@@ -134,9 +134,9 @@ const QuranVerse = ({
           {arabic[juz][quarter].map((ayah, index) => (
             <div
               key={index}
-              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600" : ""}`}
+              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600 text-emerald-500" : ""}`}
             >
-              <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
+              <p className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl ${index === activeAyahIndex ? "text-emerald-500" : ""}`}>
                 {ayah}
               </p>
               <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
