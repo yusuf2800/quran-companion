@@ -178,7 +178,7 @@ const QuranVerse = ({
           </button>
         </div>
 
-        <audio ref={audioRef} src={`/audios/${juz}.${quarter}.mp3`} />
+        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz},${quarter}.mp3`} />
       </div>
     </>
   );
