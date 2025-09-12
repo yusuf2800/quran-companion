@@ -89,7 +89,6 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  // ✅ Handle invalid case AFTER hooks
   if (!valid) {
     return (
       <div className="flex h-screen w-screen items-center justify-center">

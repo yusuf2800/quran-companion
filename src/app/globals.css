@@ -23,10 +23,7 @@
   src: url("/public/font/Inter_18pt-Regular.ttf");
 }
 
-@font-face {
-  font-family: "kfgqpc";
-  src: url("/public/font/KFGQPC-KufiStyV14.ttf");
-}
+
 
 @font-face {
   font-family: "sche";

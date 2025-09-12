@@ -10,13 +10,11 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
   const router = useRouter();
   const navigate = () => router.push("/");
 
-  // ✅ Hooks always at the top
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // ✅ Stable handler for time updates
   const handleTimeUpdate = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
