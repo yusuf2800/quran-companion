@@ -14,11 +14,6 @@
 }
 
 @font-face {
-  font-family: "kfgq";
-  src: url("/public/font/KfgqpcHafsUthmanicScriptRegular-1jGEe.ttf");
-}
-
-@font-face {
   font-family: "Inter";
   src: url("/public/font/Inter_18pt-Regular.ttf");
 }
@@ -39,9 +34,7 @@
   --font-surahName: "surah-name-v1-icon";
   --font-quranCommon: "common/quran-common";
   --font-inter: "Inter";
-  --font-kfg: "kfgqpc";
   --font-sche: "sche";
-  --font-kfguthmani: "kfgq";
   --font-surahName: 'surah-name';
 }
 
