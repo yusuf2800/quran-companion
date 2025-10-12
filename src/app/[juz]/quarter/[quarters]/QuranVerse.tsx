@@ -95,7 +95,7 @@ const QuranVerse = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 p-4 backdrop-blur-2xl selection:bg-emerald-400">
+      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 p-2 backdrop-blur-2xl selection:bg-emerald-400">
         <motion.label
           className="left-0 mx-3 cursor-pointer text-lg font-extrabold text-emerald-400 selection:text-gray-700 sm:text-xl"
           initial={{ x: -100, opacity: 0 }}
@@ -107,37 +107,39 @@ const QuranVerse = ({
           Quran Companion
         </motion.label>
         <div className="mx-5 flex items-center gap-x-5">
-          <h1 className="cursor-pointer px-2 py-2.5 font-bold text-white">
-            Reciters
-          </h1>
+          <h1 className="cursor-pointer px-2 font-bold text-white">Reciters</h1>
           <h1 className="px-2 py-2.5 font-bold text-white">
             {`Quarter ${quarter} - Juz ${juz}`}
           </h1>
         </div>
       </header>
 
-      <div className="mt-5 px-4 text-white sm:px-8 md:px-24">
-        <div className="w-[500px] h-[600px] flex justify-center items-center">
-          <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
-            ﷽
-          </h1>
-        </div>
+      <div className="max-w-screen mx-20">
+        <div className="mt-5 px-4 text-white sm:px-8 md:px-24">
+          <div className="flex h-[600px] w-[500px] items-center justify-center">
+            <h1 className="font-quranCommon mx-auto mt-5 mb-10 pt-6 text-center text-4xl">
+              ﷽
+            </h1>
+          </div>
 
-        <div className="mx-2 sm:mx-10 md:mx-24">
-          {arabic[juz][quarter].map((ayah, index) => (
-            <div
-              key={index}
-              className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600 text-emerald-500" : ""}`}
-            >
-              <p className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl ${index === activeAyahIndex ? "text-emerald-500" : ""}`}>
-                {ayah}
-              </p>
-              <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
-                {translation[juz][quarter][index]}
-              </p>
-              <div className="h-[1.5px] w-full bg-gray-600"></div>
-            </div>
-          ))}
+          <div className="mx-2 sm:mx-10 md:mx-24">
+            {arabic[juz][quarter].map((ayah, index) => (
+              <div
+                key={index}
+                className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600 text-emerald-500" : ""}`}
+              >
+                <p
+                  className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl ${index === activeAyahIndex ? "text-emerald-500" : ""}`}
+                >
+                  {ayah}
+                </p>
+                <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
+                  {translation[juz][quarter][index]}
+                </p>
+                <div className="h-[1.5px] w-full bg-gray-600"></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -170,7 +172,10 @@ const QuranVerse = ({
           </button>
         </div>
 
-        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}.mp3`} />
+        <audio
+          ref={audioRef}
+          src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}.mp3`}
+        />
       </div>
     </>
   );
