@@ -35,7 +35,7 @@ const Page = ({ params }: Props) => {
   const { juz, quarters } = resolvedParams;
 
   return (
-    <div className="mx-5 mb-20 flex min-h-screen min-w-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
+    <div className="mb-20 flex min-h-screen min-w-screen overflow-x-hidden border-none bg-gradient-to-br from-gray-900 to-gray-800 to-75% selection:bg-emerald-400">
       <QuranVerse juz={Number(juz)} quarter={Number(quarters)} valid={valid} />
     </div>
   );
