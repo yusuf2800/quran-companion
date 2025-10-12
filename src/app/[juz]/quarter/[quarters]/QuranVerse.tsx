@@ -17,14 +17,12 @@ const QuranVerse = ({
   const router = useRouter();
   const navigate = () => router.push("/");
 
-  // ✅ Hooks always at the top
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // ✅ Stable callback for time updates
   const handleTimeUpdate = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -38,7 +36,6 @@ const QuranVerse = ({
     setActiveAyahIndex(idx >= 0 ? idx : null);
   }, [juz, quarter]);
 
-  // ✅ Seek handler
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = Number(e.target.value);
     const audio = audioRef.current;
@@ -52,7 +49,6 @@ const QuranVerse = ({
     setActiveAyahIndex(idx >= 0 ? idx : null);
   };
 
-  // ✅ Effect for metadata + updates
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -68,7 +64,6 @@ const QuranVerse = ({
     };
   }, [handleTimeUpdate]);
 
-  // ✅ Toggle play/pause
   const togglePlay = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
@@ -79,7 +74,6 @@ const QuranVerse = ({
     setIsPlaying(!isPlaying);
   };
 
-  // ✅ Format time
   const formatDuration = (durationSeconds: number) => {
     if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
     const minutes = Math.floor(durationSeconds / 60);
@@ -148,7 +142,6 @@ const QuranVerse = ({
       </div>
 
       <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 p-2.5 shadow-xl">
-        {/* Progress bar */}
         <input
           type="range"
           className="h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
@@ -158,7 +151,6 @@ const QuranVerse = ({
           onChange={handleSeek}
         />
 
-        {/* Time + Controls */}
         <div className="mt-2 flex w-full items-center justify-between">
           <span className="text-xs text-gray-400">
             {formatDuration(currentTime)}
@@ -178,7 +170,7 @@ const QuranVerse = ({
           </button>
         </div>
 
-        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz},${quarter}.mp3`} />
+        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}.mp3`} />
       </div>
     </>
   );

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import QuranVerse from "./QuranVerse";
 
-// Update the type to match Next.js 15+ expectations
 interface Props {
   params: Promise<{ juz: string; quarters: string }>;
 }
@@ -13,11 +12,9 @@ const Page = ({ params }: Props) => {
   const [valid, setValid] = useState(true);
 
   useEffect(() => {
-    // Resolve the params promise
     params.then((resolved) => {
       setResolvedParams(resolved);
       
-      // Validate after resolving
       if (Number(resolved.juz) > 30 || Number(resolved.quarters) > 4) {
         setValid(false);
       }
