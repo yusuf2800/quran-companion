@@ -115,14 +115,14 @@ const QuranVerse = ({
       </header>
 
       <div className="max-w-screen mx-5">
-        <div className="mt-5 px-4 text-white sm:px-8 md:px-24">
+        <div className="mt-5 px-4 text-white sm:px-8">
           <div className="flex items-center justify-center">
-            <h1 className="font-quranCommon mx-auto my-5 pt-6 text-center text-4xl">
+            <h1 className="font-quranCommon mx-auto my-10` pt-6 text-center text-4xl sm:my-5">
               ﷽
             </h1>
           </div>
 
-          <div className="mx-2 sm:mx-10 md:mx-24">
+          <div className="mx-2 sm:mx-10">
             {arabic[juz][quarter].map((ayah, index) => (
               <div
                 key={index}
