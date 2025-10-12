@@ -114,10 +114,10 @@ const QuranVerse = ({
         </div>
       </header>
 
-      <div className="max-w-screen mx-5">
+      <div className="mx-5 max-w-screen">
         <div className="mt-5 px-4 text-white sm:px-8">
-          <div className="flex items-center justify-center">
-            <h1 className="font-quranCommon mx-auto my-10` pt-6 text-center text-4xl sm:my-5">
+          <div className="my-50 flex items-center justify-center">
+            <h1 className="font-quranCommon mx-auto mt-16 mb-10 text-center text-4xl sm:mt-10 sm:mb-5">
               ﷽
             </h1>
           </div>
