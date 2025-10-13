@@ -23,7 +23,6 @@ const QuranVerse = ({
   const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // ✅ store all ayah refs
   const ayahRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleTimeUpdate = useCallback(() => {
@@ -131,7 +130,7 @@ const QuranVerse = ({
       <div className="mx-5 mt-24 max-w-screen">
         <div className="px-4 text-white sm:px-8">
           <div className="my-35 flex items-center justify-center">
-            <h1 className="font-quranCommon mx-auto mt-4 text-center text-4xl sm:mt-10 sm:mb-5">
+            <h1 className="font-quranCommon mx-auto mt-4 text-center text-4xl sm:my-2">
               ﷽
             </h1>
           </div>
@@ -140,7 +139,6 @@ const QuranVerse = ({
             {arabic[juz][quarter].map((ayah, index) => (
               <div
                 key={index}
-                // ✅ FIXED: use braces so the callback returns void
                 ref={(el) => { ayahRefs.current[index] = el; }}
                 className={`mb-6 rounded-lg p-3 transition-colors duration-300 ${
                   index === activeAyahIndex
