@@ -23,6 +23,9 @@ const QuranVerse = ({
   const [activeAyahIndex, setActiveAyahIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // ✅ NEW: store all ayah refs
+  const ayahRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const handleTimeUpdate = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -83,6 +86,17 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
+  useEffect(() => {
+    if (activeAyahIndex === null) return;
+    const el = ayahRefs.current[activeAyahIndex];
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [activeAyahIndex]);
+
   if (!valid) {
     return (
       <div className="flex h-screen w-screen items-center justify-center">
@@ -114,8 +128,9 @@ const QuranVerse = ({
         </div>
       </header>
 
-      <div className="mx-5 max-w-screen">
-        <div className="mt-5 px-4 text-white sm:px-8">
+      <div className="mx-5 mt-24 max-w-screen">
+        {" "}
+        <div className="px-4 text-white sm:px-8">
           <div className="my-35 flex items-center justify-center">
             <h1 className="font-quranCommon mx-auto mt-4 text-center text-4xl sm:mt-10 sm:mb-5">
               ﷽
@@ -126,10 +141,17 @@ const QuranVerse = ({
             {arabic[juz][quarter].map((ayah, index) => (
               <div
                 key={index}
-                className={`mb-6 ${index === activeAyahIndex ? "bg-gray-600 text-emerald-500" : ""}`}
+                ref={(el) => (ayahRefs.current[index] = el)} 
+                className={`mb-6 rounded-lg p-3 transition-colors duration-300 ${
+                  index === activeAyahIndex
+                    ? "bg-gray-600 text-emerald-500"
+                    : "bg-transparent"
+                }`}
               >
                 <p
-                  className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl ${index === activeAyahIndex ? "text-emerald-500" : ""}`}
+                  className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl ${
+                    index === activeAyahIndex ? "text-emerald-500" : ""
+                  }`}
                 >
                   {ayah}
                 </p>
