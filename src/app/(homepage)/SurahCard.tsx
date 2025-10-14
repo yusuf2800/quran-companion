@@ -68,14 +68,12 @@ export const SurahCard = () => {
                       navigate(`/${juz}/quarter/${idx + 1}`);
                     }}
                   >
-                    {/* Diamond number */}
                     <div className="my-auto ml-2 flex aspect-square w-11 rotate-45 items-center justify-center rounded-[3px] bg-emerald-400 selection:bg-emerald-400">
                       <label className="-rotate-45 cursor-pointer text-[15px]">
                         {num}
                       </label>
                     </div>
 
-                    {/* Surah info */}
                     <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end selection:bg-emerald-400">
                       <label className="cursor-pointer text-[12px] font-[600] uppercase"></label>
                     </div>
@@ -98,19 +96,21 @@ export const SurahCard = () => {
                 transition={{ duration: 1.2, ease: "easeInOut" }}
                 
               >
-                <div className="relative flex w-full text-white">
-                  <div className="mx-2 my-auto flex aspect-square w-10 rotate-45 items-center justify-center rounded-[3px] bg-emerald-400 selection:bg-emerald-400">
+                <div className="relative flex w-full text-white justify-between">
+                  <div className="flex flex-row">
+                    <div className="mx-2 my-auto flex aspect-square w-10 rotate-45 items-center justify-center rounded-[3px] bg-emerald-400 selection:bg-emerald-400">
                     <label className="-rotate-45 cursor-pointer text-[15px]">
                       {surah}
                     </label>
                   </div>
-                  <div className="ml-5 flex w-[190px] flex-col justify-center text-[16px] selection:bg-emerald-400">
+                  <div className="flex w-[100px] flex-col justify-center text-[16px] selection:bg-emerald-400 mx-2">
                     <span className="">{eng_name}</span>
                     <span className="text-[11px] font-[600]">
                       {translation}
                     </span>
                   </div>
-                  <div className="my-auto mr-[10px] flex w-[30%] flex-col items-end justify-end selection:bg-emerald-400">
+                  </div>
+                  <div className="my-auto mr-[10px] flex w-[95%] flex-col items-end justify-end selection:bg-emerald-400">
                     <label className="font-surahName cursor-pointer text-2xl font-[500]">
                       {surah > 9
                         ? `${surah > 99 ? `surah${surah}` : `surah0${surah}`} `
@@ -122,6 +122,7 @@ export const SurahCard = () => {
                   </div>
                 </div>
               </motion.div>
+              
             ))}
           </div>
         </TabsContent>

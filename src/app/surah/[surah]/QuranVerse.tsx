@@ -15,6 +15,12 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const surahs = [
+    "",
+    "https://edef7.pcloud.com/D4Zkq1ixUZKay1SD7ZhFBBZZ7sHp0kZlXZZH85ZZbXxXZXpZG4Z1zZXmaUZ2sDqhB6B2WFGpgAT4OrgzyojYemy/Surat%20Al-Fatiha%20-%20Mishary%20Rashid%20Alafasy.mp3",
+    'https://edef8.pcloud.com/cBZo1TFxUZec5EbD7ZZZmQHp0kZlXZZH85ZZwOQGpZgLZspZp4Zr5ZfzZnHZ75ZczZRRZJ4ZJpZw4ZqRZ9HZeYaUZWpHKOw3Nha7JzQy4W4f1nVA2482k/Surah%20Al-Baqarah%20Mishary%20Rashed%20Alafasy%20%D8%B3%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A8%D9%82%D8%B1%D8%A9%201422%D9%87%D9%80%202001%D9%85%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%20%D8%B1%D8%A7%D8%B4%D8%AF%20%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A.mp3'
+  ];
+
   const handleTimeUpdate = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -46,7 +52,6 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
     };
   }, [handleTimeUpdate]);
 
-  // ✅ Toggle play/pause
   const togglePlay = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
@@ -102,7 +107,6 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
       <div className="mt-5 flex justify-center px-4 text-white sm:px-8 md:px-24">
         <div className="w-screen">
           <h1 className="font-surahName mt-5 text-center text-4xl">
-            Surah{" "}
             {surah > 10 ? (surah > 100 ? surah : `0${surah}`) : `00${surah}`}
           </h1>
           <h1 className="font-quranCommon mt-5 mb-10 pt-6 text-center text-4xl">
@@ -112,10 +116,7 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
 
         <div className="mx-2 sm:mx-10 md:mx-24">
           {arabic[0].map((ayah, index) => (
-            <div
-              key={index}
-              className={`mb-6`}
-            >
+            <div key={index} className={`mb-6`}>
               <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
                 {ayah}
               </p>
@@ -126,7 +127,6 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
       </div>
 
       <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 p-2.5 shadow-xl">
-        {/* Progress bar */}
         <input
           type="range"
           className="h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
@@ -136,7 +136,6 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
           onChange={handleSeek}
         />
 
-        {/* Time + Controls */}
         <div className="mt-2 flex w-full items-center justify-between">
           <span className="text-xs text-gray-400">
             {formatDuration(currentTime)}
@@ -156,7 +155,10 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
           </button>
         </div>
 
-        <audio ref={audioRef} src={`/audios/${surah}.mp3`} />
+        <audio
+          ref={audioRef}
+          src={surahs[surah]}
+        />
       </div>
     </>
   );

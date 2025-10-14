@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 const QuranVerse = ({
   juz,
@@ -85,6 +95,10 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
+  const reciters = ['Mishary Rashid Alafsay', 'Yasser Al Dosari']
+
+  const [typeReciter, setTypeReciter] = useState('Mishary Rashid Alafsay')
+  
   useEffect(() => {
     if (activeAyahIndex === null) return;
     const el = ayahRefs.current[activeAyahIndex];
@@ -119,8 +133,21 @@ const QuranVerse = ({
         >
           Quran Companion
         </motion.label>
+
         <div className="mx-5 flex items-center gap-x-5">
-          <h1 className="cursor-pointer px-2 font-bold text-white">Reciters</h1>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="font-extrabold text-white border-0 px-10 flex flex-row cursor-pointer">
+              Reciters <ChevronDown size={20} className="my-auto ml-1"/>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="mt-3 bg-gray-800 text-white rounded-[3px] selection:bg-emerald-400 font-semibold border-0 shadow-lg">
+              {reciters.map((reciter, index) => (
+                <DropdownMenuItem key={index} className="text-white hover:bg-gray-700 cursor-pointer border-0" onClick={() => setTypeReciter(reciter)}>
+                {reciter} 
+              </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <h1 className="px-2 py-2.5 font-bold text-white">
             {`Quarter ${quarter} - Juz ${juz}`}
           </h1>
@@ -129,7 +156,7 @@ const QuranVerse = ({
 
       <div className="mx-2 mt-24 max-w-screen">
         <div className="px-4 text-white sm:px-8">
-          <div className="my-20 flex items-center justify-center">
+          <div className="my-12 flex items-center justify-center">
             <h1 className="font-quranCommon mx-auto mt-4 text-center text-4xl sm:my-2">
               ﷽
             </h1>
@@ -139,7 +166,9 @@ const QuranVerse = ({
             {arabic[juz][quarter].map((ayah, index) => (
               <div
                 key={index}
-                ref={(el) => { ayahRefs.current[index] = el; }}
+                ref={(el) => {
+                  ayahRefs.current[index] = el;
+                }}
                 className={`mb-6 rounded-lg p-3 transition-colors duration-300 ${
                   index === activeAyahIndex
                     ? "bg-gray-600 text-emerald-500"
@@ -194,7 +223,7 @@ const QuranVerse = ({
 
         <audio
           ref={audioRef}
-          src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}.mp3`}
+          src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}${typeReciter==='Yasser Al Dosari' ? 'A' : ''}.mp3`}
         />
       </div>
     </>
