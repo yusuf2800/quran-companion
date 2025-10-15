@@ -6,15 +6,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(homepage)/page": [
+    "/[juz]/quarter/[quarters]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(homepage)/page.js"
-    ],
-    "/surah/[surah]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/surah/[surah]/page.js"
+      "static/chunks/app/[juz]/quarter/[quarters]/page.js"
     ]
   }
 }
