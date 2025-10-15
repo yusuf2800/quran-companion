@@ -5,33 +5,28 @@ body {
   background-color: #151e2e;
 }
 
-
 @font-face {
   font-family: "surah-name-v1-icon";
-  src: url("/public/font/surah-name-v1.ttf");
-}
-
-@font-face {
-  font-family: "common/quran-common";
-  src: url("https://static-cdn.tarteel.ai/qul/fonts/common/quran-common.ttf");
+  src: url("/font/surah-name-v1.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/public/font/Inter_18pt-Regular.ttf");
+  src: url("/font/Inter_18pt-Regular.ttf") format("truetype");
+  font-display: swap;
 }
-
-
 
 @font-face {
   font-family: "sche";
-  src: url("/public/font/ScheherazadeNew-Regular.ttf");
+  src: url("/font/ScheherazadeNew-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'surah-name';
-  src: url('/public/font/surah-name-v2.ttf');
+  font-family: "surah-name";
+  src: url("/font/surah-name-v2.ttf") format("truetype");
+  font-display: swap;
 }
 
 @theme {
@@ -39,11 +34,8 @@ body {
   --font-quranCommon: "common/quran-common";
   --font-inter: "Inter";
   --font-sche: "sche";
-  --font-surahName: 'surah-name';
+  --font-surahName: "surah-name";
 }
-
-
-
 
 @custom-variant dark (&:is(.dark *));
 
