@@ -36,12 +36,12 @@ body {
 
 @font-face {
   font-family: 'uthmanic';
-  src: url('/font/UthmanicHafs_V22 2.ttf') format("truetype");
+  src: url('/font/uthmanic') format("truetype");
   font-display: swap;
 }
 
 @theme {
-  --font-uthmanic: 'uthmanic'
+  --font-uthmanic: 'uthmanic';
   --font-surahName: "surah-name-v1-icon";
   --font-quranCommon: "common/quran-common";
   --font-inter: "Inter";
