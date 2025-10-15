@@ -177,7 +177,7 @@ const QuranVerse = ({
                     index === activeAyahIndex ? "text-emerald-500" : ""
                   }`}
                 >
-                  {ayah}
+                  {ayah} <span className="">{`(${index+1})`}</span>
                 </p>
                 <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
                   {translation[juz][quarter][index]}
