@@ -12,6 +12,11 @@ body {
 }
 
 @font-face {
+  font-family: "indopak";
+  src: url("/font/font.ttf");
+}
+
+@font-face {
   font-family: "Inter";
   src: url("/font/Inter_18pt-Regular.ttf") format("truetype");
   font-display: swap;
@@ -35,6 +40,7 @@ body {
   --font-inter: "Inter";
   --font-sche: "sche";
   --font-surahName: "surah-name";
+  --font-indopak: "indopak";
 }
 
 @custom-variant dark (&:is(.dark *));
