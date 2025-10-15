@@ -17,8 +17,30 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
 
   const surahs = [
     "",
-    "https://edef7.pcloud.com/D4Zkq1ixUZKay1SD7ZhFBBZZ7sHp0kZlXZZH85ZZbXxXZXpZG4Z1zZXmaUZ2sDqhB6B2WFGpgAT4OrgzyojYemy/Surat%20Al-Fatiha%20-%20Mishary%20Rashid%20Alafasy.mp3",
-    'https://edef8.pcloud.com/cBZo1TFxUZec5EbD7ZZZmQHp0kZlXZZH85ZZwOQGpZgLZspZp4Zr5ZfzZnHZ75ZczZRRZJ4ZJpZw4ZqRZ9HZeYaUZWpHKOw3Nha7JzQy4W4f1nVA2482k/Surah%20Al-Baqarah%20Mishary%20Rashed%20Alafasy%20%D8%B3%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A8%D9%82%D8%B1%D8%A9%201422%D9%87%D9%80%202001%D9%85%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%20%D8%B1%D8%A7%D8%B4%D8%AF%20%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A.mp3'
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760541312/Surat_Al-Fatiha_-_Mishary_Rashid_Alafasy_a2btfx.mp4",
+    "https://pixeldrain.com/api/file/uCeXBG7C",
+    "https://pixeldrain.com/api/file/MNVkVGgq",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760553812/Surah_An_Nisa_-_Mishary_Rashid_Alafasy_-_Quran_Recitation_l96gi5.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760554178/Surah_Al-Ma_ida_-_Mishary_Rashid_Alafasy_%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D9%85%D8%A7%D9%8A%D9%94%D8%AF%D8%A9_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_-_Alafasy_gf32bq.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760554329/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%94%D9%86%D8%B9%D8%A7%D9%85_1419%D9%87%D9%80_1998%D9%85_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surah_Al-An_am_Mishary_Alafasy_-_Alafasy_fxqp9f.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760554503/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%94%D8%B9%D8%B1%D8%A7%D9%81_1422%D9%87%D9%80_2001%D9%85_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surah_Al-A_raf_Mishary_Alafasy_-_Alafasy_qoivrz.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760554589/Surat_Al-Anfal_-_Mishary_Rashid_Alafasy_-_Alafasy_ywlqak.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760554821/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%AA%D9%88%D8%A8%D8%A9_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surah_At-Tawba_Mishary_Rashid_Alafasy_-_Alafasy_dhjfit.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760558015/Surat_Yunus_-_Mishary_Rashid_Alafasy_-_Alafasy_dn1vre.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760558229/Surat_Hood_-_Mishary_Rashid_Alafasy_-_Alafasy_evcbqa.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760558323/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_%D8%B3%D9%88%D8%B1%D8%A9_%D9%8A%D9%88%D8%B3%D9%81_Surat_Yusuf_-_Mishary_Rashid_Alafasy_-_Alafasy_s84ulj.mp3",
+    "https://res.cloudinary.com/ddsiorkrx/video/upload/v1760558478/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_Ar-Ra_d_-_Mishary_Alafasy_-_Alafasy_w7ql4c.mp3",
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760559686/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%95%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_ibrahim_-_Mishary_Alafasy_-_Alafasy_xmfuje.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760559760/Surat_Al-Hijr_-_Mishary_Rashed_Alafasy_-_Alafasy_bhxfma.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760559843/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D9%86%D8%AD%D9%84_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_An-Nahl_Mishary_Rashed_Alafasy_1426_-_Alafasy_atdo69.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560262/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%95%D8%B3%D8%B1%D8%A7%D8%A1_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_Al-Isra_-_Mishary_Rashed_Alafasy_-_Alafasy_zqz2ru.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560326/Surat_Al-Kahf_-_Mishary_Rashed_Alafasy_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D9%83%D9%87%D9%81_-_Alafasy_s9iytm.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560357/%D8%B3%D9%88%D8%B1%D8%A9_%D9%85%D8%B1%D9%8A%D9%85_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_Maryam_-_Mishary_Rashed_Alafasy_-_Alafasy_pl4azo.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560388/Surat_Ta_Ha_-_Mishary_Rashed_Alafasy_-_Alafasy_j8nlrg.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560416/Surat_Al-Anbiya_-_Mishary_Rashed_Alafasy_-_Alafasy_togrsd.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560480/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D8%AD%D8%AC_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_Al-Hajj_-_Mishary_Rashed_Alafasy_-_Alafasy_cdavfw.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560611/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D9%85%D9%88%D9%94%D9%85%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surah_Al-Mu_minun_-_Mishary_Rashid_Alafasy_-_Alafasy_aitgeu.mp3',
+    'https://res.cloudinary.com/ddsiorkrx/video/upload/v1760560654/%D8%B3%D9%88%D8%B1%D8%A9_%D8%A7%D9%84%D9%86%D9%88%D8%B1_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A_%D8%B1%D8%A7%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%D9%8A_Surat_An-Nur_-_Mishary_Rashed_Alafasy_-_Alafasy_luifwv.mp3'
   ];
 
   const handleTimeUpdate = useCallback(() => {
@@ -52,23 +74,35 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
     };
   }, [handleTimeUpdate]);
 
-  const togglePlay = () => {
-    if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      void audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
+  const togglePlay = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    try {
+      if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        await audio.play();
+        setIsPlaying(true);
+      }
+    } catch (err) {}
   };
 
-  const formatDuration = (durationSeconds: number) => {
-    if (!durationSeconds || isNaN(durationSeconds)) return "0:00";
-    const minutes = Math.floor(durationSeconds / 60);
-    const seconds = Math.floor(durationSeconds % 60)
-      .toString()
-      .padStart(2, "0");
-    return `${minutes}:${seconds}`;
+  const formatDuration = (seconds: number) => {
+    if (!seconds || isNaN(seconds) || !isFinite(seconds)) return "0:00";
+
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+
+    if (hrs > 0) {
+      return `${hrs}:${mins.toString().padStart(2, "0")}:${secs
+        .toString()
+        .padStart(2, "0")}`;
+    } else {
+      return `${mins}:${secs.toString().padStart(2, "0")}`;
+    }
   };
 
   if (!valid) {
@@ -155,10 +189,7 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
           </button>
         </div>
 
-        <audio
-          ref={audioRef}
-          src={surahs[surah]}
-        />
+        <audio ref={audioRef} src={surahs[surah]} />
       </div>
     </>
   );
