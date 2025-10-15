@@ -173,11 +173,11 @@ const QuranVerse = ({
                 }`}
               >
                 <p
-                  className={`font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl font-uthmanic ${
+                  className={`mb-2 text-right text-2xl leading-loose sm:text-3xl font-uthmanic ${
                     index === activeAyahIndex ? "text-emerald-500" : ""
                   }`}
                 >
-                  {ayah} <span className="">{`(${index+1})`}</span>
+                  {ayah} <span className="font-surahName">{`(${index+1})`}</span>
                 </p>
                 <p className="mt-5 mb-6 text-base text-gray-300 sm:text-lg">
                   {translation[juz][quarter][index]}
