@@ -1,3 +1,4 @@
 {
-  "/(homepage)/page": "app/(homepage)/page.js"
+  "/(homepage)/page": "app/(homepage)/page.js",
+  "/[juz]/quarter/[quarters]/page": "app/[juz]/quarter/[quarters]/page.js"
 }

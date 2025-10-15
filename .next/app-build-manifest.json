@@ -10,6 +10,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(homepage)/page.js"
+    ],
+    "/[juz]/quarter/[quarters]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[juz]/quarter/[quarters]/page.js"
     ]
   }
 }
