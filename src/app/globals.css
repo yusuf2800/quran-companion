@@ -42,10 +42,16 @@ body {
 
 @font-face {
   font-family: "quranCommon";
-  src: url('/font/QCF_P001.ttf') format("truetype");
+  src: url("/font/quran-common.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "surah-name-v4";
+  src: url("/font/surah-name-v4.ttf") format("truetype");
 }
 
 @theme {
+  --font-surahNameV4: "surah-name-v4";
   --font-uthmanic: "uthmanic";
   --font-surahName: "surah-name-v1-icon";
   --font-quranCommon: "quranCommon";

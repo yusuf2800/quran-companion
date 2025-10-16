@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { juzs, surahs } from "./bodyData";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface Tabs {
   name: string;
@@ -21,13 +22,25 @@ export const SurahCard = () => {
     { name: "Juz", value: "juz" },
   ];
 
-  const nums = [1, 2, 3, 4];
+  const nums: number[] = [...Array(4)].map((_, i) => i + 1);
+
+  const [currentTab, setCurrentTab] = useState<string>("quarters");
+
+  useEffect(() => {
+    const savedTab = localStorage.getItem("currentTab");
+
+    if (savedTab) setCurrentTab(savedTab);
+  }, []);
 
   return (
     <div className="mt-30 mb-10">
       <Tabs
-        defaultValue="quarters"
+        value={currentTab}
         className="flex w-screen justify-center overflow-y-auto"
+        onValueChange={(val) => {
+          setCurrentTab(val);
+          localStorage.setItem("currentTab", val);
+        }}
       >
         <motion.div
           className="mx-auto h-9 w-screen bg-transparent shadow-2xl"
@@ -42,6 +55,7 @@ export const SurahCard = () => {
                 key={index}
                 value={value}
                 className="cursor-pointer p-3 text-[16px] font-[700] text-white data-[state=active]:border-b-emerald-400 data-[state=active]:text-emerald-400"
+                onClick={() => localStorage.setItem("currentTab", value)}
               >
                 {name}
               </TabsTrigger>
@@ -94,24 +108,23 @@ export const SurahCard = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
-                
               >
-                <div className="relative flex w-full text-white justify-between">
+                <div className="relative flex w-full justify-between text-white">
                   <div className="flex flex-row">
                     <div className="mx-3 my-auto flex aspect-square w-10 rotate-45 items-center justify-center rounded-[3px] bg-emerald-400 selection:bg-emerald-400">
-                    <label className="-rotate-45 cursor-pointer text-[19px]">
-                      {surah}
-                    </label>
-                  </div>
-                  <div className="flex w-[100px] flex-col justify-center text-[16px] selection:bg-emerald-400 mx-2">
-                    <span className="">{eng_name}</span>
-                    <span className="text-[11px] font-[600]">
-                      {translation}
-                    </span>
-                  </div>
+                      <label className="-rotate-45 cursor-pointer text-[19px]">
+                        {surah}
+                      </label>
+                    </div>
+                    <div className="mx-2 flex w-[100px] flex-col justify-center text-[16px] selection:bg-emerald-400">
+                      <span className="">{eng_name}</span>
+                      <span className="text-[11px] font-[600]">
+                        {translation}
+                      </span>
+                    </div>
                   </div>
                   <div className="my-auto mr-[10px] flex w-[95%] flex-col items-end justify-end selection:bg-emerald-400">
-                    <label className="font-surahName cursor-pointer text-2xl font-[500]">
+                    <label className="font-surahNameV4 cursor-pointer text-2xl font-[500]">
                       {surah > 9
                         ? `${surah > 99 ? `surah${surah}` : `surah0${surah}`} `
                         : `surah00${surah}`}
@@ -122,7 +135,6 @@ export const SurahCard = () => {
                   </div>
                 </div>
               </motion.div>
-              
             ))}
           </div>
         </TabsContent>
@@ -145,7 +157,7 @@ export const SurahCard = () => {
                     </label>
                   </div>
                   <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end selection:bg-emerald-400">
-                    <label className="font-quranCommon mb-1 cursor-pointer text-lg font-extrabold">
+                    <label className="font-surahName mb-1 cursor-pointer text-lg font-extrabold">
                       {juz > 9 ? `j0${juz}` : `j00${juz}`}
                     </label>
                     <label className="leading-tighter cursor-pointer text-[11px] font-bold uppercase">
