@@ -149,7 +149,7 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
         <div className="mx-2 sm:mx-10 md:mx-24">
           {arabic[0].map((ayah, index) => (
             <div key={index} className={`mb-6`}>
-              <p className="font-kfguthmani mb-2 text-right text-2xl leading-loose sm:text-3xl">
+              <p className="font-indopak mb-2 text-right text-2xl leading-loose sm:text-3xl">
                 {ayah}
               </p>
               <div className="h-[1.5px] w-full bg-gray-600"></div>
