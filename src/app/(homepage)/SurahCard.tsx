@@ -124,7 +124,7 @@ export const SurahCard = () => {
                     </div>
                   </div>
                   <div className="my-auto mr-[10px] flex w-[95%] flex-col items-end justify-end selection:bg-emerald-400">
-                    <label className="font-surahNameV4 cursor-pointer text-2xl font-[500]">
+                    <label className="font-surahName cursor-pointer text-2xl font-[500]">
                       {surah > 9
                         ? `${surah > 99 ? `surah${surah}` : `surah0${surah}`} `
                         : `surah00${surah}`}
@@ -157,7 +157,7 @@ export const SurahCard = () => {
                     </label>
                   </div>
                   <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end selection:bg-emerald-400">
-                    <label className="font-surahName mb-1 cursor-pointer text-lg font-extrabold">
+                    <label className="font-quranCommon mb-1 cursor-pointer text-lg font-extrabold">
                       {juz > 9 ? `j0${juz}` : `j00${juz}`}
                     </label>
                     <label className="leading-tighter cursor-pointer text-[11px] font-bold uppercase">

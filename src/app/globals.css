@@ -48,12 +48,13 @@ body {
 @font-face {
   font-family: "surah-name-v4";
   src: url("/font/surah-name-v4.ttf") format("truetype");
+  font-display: swap;
 }
 
 @theme {
   --font-surahNameV4: "surah-name-v4";
   --font-uthmanic: "uthmanic";
-  --font-surahName: "surah-name-v1-icon";
+  /* --font-surahName: "surah-name-v1-icon"; */
   --font-quranCommon: "quranCommon";
   --font-inter: "Inter";
   --font-sche: "sche";
