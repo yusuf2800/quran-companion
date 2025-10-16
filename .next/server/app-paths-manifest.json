@@ -1,5 +1,3 @@
 {
-  "/(homepage)/page": "app/(homepage)/page.js",
-  "/surah/[surah]/page": "app/surah/[surah]/page.js",
-  "/[juz]/quarter/[quarters]/page": "app/[juz]/quarter/[quarters]/page.js"
+  "/(homepage)/page": "app/(homepage)/page.js"
 }

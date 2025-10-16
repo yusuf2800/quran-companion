@@ -28,7 +28,7 @@ export const Body = ({ onClick }: BodyProp) => {
       <motion.div className="flex min-h-screen min-w-screen flex-col items-center justify-center">
         {startTyping && (
           <TypeAnimation
-            className="mx-3 mb-5 text-center text-4xl leading-14 font-bold text-emerald-300 selection:text-gray-700 sm:text-4xl"
+            className="mx-3 mb-5 text-center text-4xl leading-14 font-bold text-emerald-400 selection:text-gray-700 sm:text-4xl"
             sequence={[
               "Discover The Divine Words",
               2000,
@@ -46,7 +46,7 @@ export const Body = ({ onClick }: BodyProp) => {
             speed={20}
             deletionSpeed={20}
             repeat={Infinity}
-          ></TypeAnimation>
+          />
         )}
         {visible && <AudioBtn onClick={onClick}/>}
       </motion.div>

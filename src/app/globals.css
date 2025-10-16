@@ -35,15 +35,20 @@ body {
 }
 
 @font-face {
-  font-family: 'uthmanic';
-  src: url('/font/uthmanic.ttf') format("truetype");
+  font-family: "uthmanic";
+  src: url("/font/uthmanic.ttf") format("truetype");
   font-display: swap;
 }
 
+@font-face {
+  font-family: "quranCommon";
+  src: url('/font/QCF_P001.ttf') format("truetype");
+}
+
 @theme {
-  --font-uthmanic: 'uthmanic';
+  --font-uthmanic: "uthmanic";
   --font-surahName: "surah-name-v1-icon";
-  --font-quranCommon: "common/quran-common";
+  --font-quranCommon: "quranCommon";
   --font-inter: "Inter";
   --font-sche: "sche";
   --font-surahName: "surah-name";
