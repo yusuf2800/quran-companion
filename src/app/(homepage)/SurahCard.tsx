@@ -157,7 +157,7 @@ export const SurahCard = () => {
                     </label>
                   </div>
                   <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end selection:bg-emerald-400">
-                    <label className="font-surahNameV4 mb-1 cursor-pointer text-lg font-extrabold">
+                    <label className="font-quranCommon mb-1 cursor-pointer text-lg font-extrabold">
                       {juz > 9 ? `j0${juz}` : `j00${juz}`}
                     </label>
                     <label className="leading-tighter cursor-pointer text-[11px] font-bold uppercase">

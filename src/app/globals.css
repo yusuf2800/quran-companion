@@ -54,11 +54,11 @@ body {
 @theme {
   --font-surahNameV4: "surah-name-v4";
   --font-uthmanic: "uthmanic";
-  /* --font-surahName: "surah-name-v1-icon"; */
+  --font-surahName: "surah-name-v1-icon";
   --font-quranCommon: "quranCommon";
   --font-inter: "Inter";
   --font-sche: "sche";
-  --font-surahName: "surah-name";
+  /* --font-surahName: "surah-name"; */
   --font-indopak: "indopak";
 }
 
