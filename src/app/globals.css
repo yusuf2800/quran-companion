@@ -60,7 +60,13 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'UthmanTNB_v2-0';
+  src: url('/font/UthmanTNB_v2-0.ttf');
+}
+
 @theme {
+  --font-uthman: 'UthmanTNB_v2-0';
   --font-surahNameV4: "surah-name-v4";
   --font-uthmanic: "uthmanic";
   --font-surahName: "surah-name-v1-icon";

@@ -177,7 +177,7 @@ const QuranVerse = ({
                 }`}
               >
                 <p
-                  className={`mb-2 text-right text-2xl leading-loose sm:text-3xl font-[UthmanicHafs] ${
+                  className={`mb-2 text-right text-2xl leading-loose sm:text-3xl font-uthman ${
                     index === activeAyahIndex ? "text-emerald-500" : ""
                   }`}
                 >
