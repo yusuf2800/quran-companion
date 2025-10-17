@@ -5,6 +5,9 @@ body {
   background-color: #151e2e;
 }
 
+* {
+}
+
 @font-face {
   font-family: "surah-name-v1-icon";
   src: url("/font/surah-name-v1.ttf") format("truetype");
@@ -51,6 +54,12 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "KFGQPC-KufiStyV14";
+  src: url("/font/KFGQPC-KufiStyV14.ttf") format("truetype");
+  font-display: swap;
+}
+
 @theme {
   --font-surahNameV4: "surah-name-v4";
   --font-uthmanic: "uthmanic";
@@ -59,6 +68,7 @@ body {
   --font-inter: "Inter";
   --font-sche: "sche";
   --font-indopak: "indopak";
+  --font-kfg: "KFGQPC-KufiStyV14";
 }
 
 @custom-variant dark (&:is(.dark *));

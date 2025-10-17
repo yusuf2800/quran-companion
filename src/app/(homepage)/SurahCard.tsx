@@ -31,7 +31,7 @@ export const SurahCard = () => {
 
     if (savedTab) setCurrentTab(savedTab);
   }, []);
-  
+
   return (
     <div className="mt-30 mb-10">
       <Tabs
@@ -112,7 +112,7 @@ export const SurahCard = () => {
                 <div className="relative flex w-full justify-between text-white">
                   <div className="flex flex-row">
                     <div className="mx-3 my-auto flex aspect-square w-10 rotate-45 items-center justify-center rounded-[3px] bg-emerald-400 selection:bg-emerald-400">
-                      <label className="-rotate-45 cursor-pointer text-[19px]">
+                      <label className="-rotate-45 cursor-pointer text-[15px]">
                         {surah}
                       </label>
                     </div>

@@ -92,10 +92,10 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  const reciters = ['Mishary Rashid Alafsay', 'Yasser Al Dosari']
+  const reciters = ["Mishary Rashid Alafsay", "Yasser Al Dosari"];
 
-  const [typeReciter, setTypeReciter] = useState('Mishary Rashid Alafsay')
-  
+  const [typeReciter, setTypeReciter] = useState("Mishary Rashid Alafsay");
+
   useEffect(() => {
     if (activeAyahIndex === null) return;
     const el = ayahRefs.current[activeAyahIndex];
@@ -119,7 +119,7 @@ const QuranVerse = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30  backdrop-blur-2xl selection:bg-emerald-400">
+      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 backdrop-blur-2xl selection:bg-emerald-400">
         <motion.label
           className="left-0 mx-3 cursor-pointer text-lg font-extrabold text-emerald-400 selection:text-gray-700"
           initial={{ x: -100, opacity: 0 }}
@@ -133,14 +133,18 @@ const QuranVerse = ({
 
         <div className="mx-5 flex items-center gap-x-5">
           <DropdownMenu>
-            <DropdownMenuTrigger className="font-extrabold text-white border-0 px-10 flex flex-row cursor-pointer">
-              Reciters <ChevronDown size={20} className="my-auto ml-1"/>
+            <DropdownMenuTrigger className="flex cursor-pointer flex-row border-0 px-10 font-extrabold text-white">
+              Reciters <ChevronDown size={20} className="my-auto ml-1" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="mt-3 bg-gray-800 text-white rounded-[3px] selection:bg-emerald-400 font-semibold border-0 shadow-lg">
+            <DropdownMenuContent className="mt-3 rounded-[3px] border-0 bg-gray-800 font-semibold text-white shadow-lg selection:bg-emerald-400">
               {reciters.map((reciter, index) => (
-                <DropdownMenuItem key={index} className="text-white hover:bg-gray-700 cursor-pointer border-0" onClick={() => setTypeReciter(reciter)}>
-                {reciter} 
-              </DropdownMenuItem>
+                <DropdownMenuItem
+                  key={index}
+                  className="cursor-pointer border-0 text-white hover:bg-gray-700"
+                  onClick={() => setTypeReciter(reciter)}
+                >
+                  {reciter}
+                </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
@@ -173,7 +177,7 @@ const QuranVerse = ({
                 }`}
               >
                 <p
-                  className={`mb-2 text-right text-2xl leading-loose sm:text-3xl font-indopak ${
+                  className={`mb-2 text-right text-2xl leading-loose sm:text-3xl font-kfg ${
                     index === activeAyahIndex ? "text-emerald-500" : ""
                   }`}
                 >
@@ -189,39 +193,37 @@ const QuranVerse = ({
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 p-2.5 shadow-xl">
+      <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 p-1 shadow-xl">
         <input
           type="range"
-          className="h-1.5 w-full appearance-none rounded-lg bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
+          className="mb-1 h-1.5 w-full appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
+          style={{
+            background: `linear-gradient(to right, #10b981 ${(currentTime / duration) * 100}%, #d1d5db ${(currentTime / duration) * 100}%)`,
+          }}
           onChange={handleSeek}
         />
 
-        <div className="mt-2 flex w-full items-center justify-between">
+        
+
+        <div className="flex mx-2 justify-between w-full">
           <span className="text-xs text-gray-400">
             {formatDuration(currentTime)}
           </span>
-
+          <button
+            onClick={togglePlay}
+            className="cursor-pointer rounded-full p-2.5 text-white transition hover:bg-emerald-600"
+          >
+            {isPlaying ? <IoPause size={20} /> : <IoPlay size={20} />}
+          </button>
           <span className="text-xs text-gray-400">
             {formatDuration(duration)}
           </span>
         </div>
 
-        <div className="flex gap-x-5">
-          <button
-            onClick={togglePlay}
-            className="cursor-pointer rounded-full bg-emerald-500 p-3 text-white shadow-lg transition hover:bg-emerald-600"
-          >
-            {isPlaying ? <IoPause size={15} /> : <IoPlay size={15} />}
-          </button>
-        </div>
-
-        <audio
-          ref={audioRef}
-          src={`https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${juz}.${quarter}${typeReciter==='Yasser Al Dosari' ? 'A' : ''}.mp3`}
-        />
+        <audio ref={audioRef} src={"/audios/1.1.mp3"} />
       </div>
     </>
   );
