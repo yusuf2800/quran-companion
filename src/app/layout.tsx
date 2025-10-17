@@ -24,6 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.qurancdn.com/assets/quran_fonts/uthmanic_hafs/uthmanic_hafs.css"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
