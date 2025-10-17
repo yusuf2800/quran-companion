@@ -212,7 +212,7 @@ const QuranVerse = ({
           </span>
           <button
             onClick={togglePlay}
-            className="my-[4px] cursor-pointer rounded-full p-1.5 text-white transition hover:bg-gray-600"
+            className="my-[4px] cursor-pointer rounded-full p-[7px] text-white transition hover:bg-gray-600"
           >
             {isPlaying ? <IoPauseSharp size={24} /> : <IoPlaySharp size={24} />}
           </button>
@@ -221,7 +221,7 @@ const QuranVerse = ({
           </span>
         </div>
 
-        <audio ref={audioRef} src={"/audios/1.1.mp3"} />
+        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}.mp3`} />
       </div>
     </>
   );
