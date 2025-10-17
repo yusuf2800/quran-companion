@@ -196,7 +196,7 @@ const QuranVerse = ({
       <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 shadow-xl">
         <input
           type="range"
-          className="h-1 w-screen appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-4 [&::-ms-thumb]:w-4 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
+          className="h-0.5 w-screen appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-4 [&::-ms-thumb]:w-4 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
@@ -212,9 +212,9 @@ const QuranVerse = ({
           </span>
           <button
             onClick={togglePlay}
-            className="cursor-pointer rounded-full p-2 text-white transition hover:bg-white my-2"
+            className="cursor-pointer rounded-full p-2 text-white transition hover:bg-gray-400 my-2"
           >
-            {isPlaying ? <IoPauseSharp size={22} /> : <IoPlaySharp size={22} />}
+            {isPlaying ? <IoPauseSharp size={23} /> : <IoPlaySharp size={23} />}
           </button>
           <span className="text-md mx-3 text-gray-400">
             {formatDuration(duration)}
