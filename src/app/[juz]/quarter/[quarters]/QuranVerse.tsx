@@ -3,7 +3,6 @@ import { arabic, alafsayTimestamps, translation } from "./quran";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useCallback } from "react";
-import { IoPlay, IoPause } from "react-icons/io5";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
+import { IoPlaySharp, IoPauseSharp } from "react-icons/io5";
 
 const QuranVerse = ({
   juz,
@@ -196,7 +196,7 @@ const QuranVerse = ({
       <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 shadow-xl">
         <input
           type="range"
-          className="h-1 w-screen appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-5 [&::-ms-thumb]:w-5 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
+          className="h-1 w-screen appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-4 [&::-ms-thumb]:w-4 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
@@ -212,9 +212,9 @@ const QuranVerse = ({
           </span>
           <button
             onClick={togglePlay}
-            className="cursor-pointer rounded-full p-1.5 text-white transition hover:bg-emerald-600 my-1.5"
+            className="my-1.5 cursor-pointer rounded-full p-2 text-white transition hover:bg-emerald-600"
           >
-            {isPlaying ? <IoPause size={25} /> : <IoPlay size={25} />}
+            {isPlaying ? <IoPauseSharp size={25} /> : <IoPlaySharp size={25} />}
           </button>
           <span className="text-md mx-3 my-auto text-gray-400">
             {formatDuration(duration)}
