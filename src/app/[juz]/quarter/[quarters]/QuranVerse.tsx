@@ -212,7 +212,7 @@ const QuranVerse = ({
           </span>
           <button
             onClick={togglePlay}
-            className="my-2 cursor-pointer rounded-full p-3` text-white transition hover:bg-emerald-600"
+            className="my-2 cursor-pointer rounded-full p-2.5 text-white transition hover:bg-white"
           >
             {isPlaying ? <IoPauseSharp size={25} /> : <IoPlaySharp size={25} />}
           </button>
