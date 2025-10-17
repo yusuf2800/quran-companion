@@ -119,9 +119,9 @@ const QuranVerse = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 p-2 backdrop-blur-2xl selection:bg-emerald-400">
+      <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30  backdrop-blur-2xl selection:bg-emerald-400">
         <motion.label
-          className="left-0 mx-3 cursor-pointer text-lg font-extrabold text-emerald-400 selection:text-gray-700 sm:text-xl"
+          className="left-0 mx-3 cursor-pointer text-lg font-extrabold text-emerald-400 selection:text-gray-700"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
