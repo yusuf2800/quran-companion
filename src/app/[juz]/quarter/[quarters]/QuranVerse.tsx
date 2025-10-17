@@ -157,7 +157,7 @@ const QuranVerse = ({
 
       <div className="mx-2 mt-24 max-w-screen">
         <div className="px-1 text-white sm:px-1">
-          <div className="my-8 flex items-center justify-center">
+          <div className="my-5 flex items-center justify-center">
             <h1 className="font-quranCommon mx-auto mt-4 text-center text-4xl sm:my-2">
               ﷽
             </h1>
@@ -206,17 +206,17 @@ const QuranVerse = ({
           onChange={handleSeek}
         />
 
-        <div className="mx-1.5 flex w-screen justify-between items-center">
-          <span className="text-md mx-3 text-gray-500">
+        <div className="mx-1.5 flex w-screen items-center justify-between">
+          <span className="text-lg mx-3 mb-0.5 text-gray-500 sm:mb-0">
             {formatDuration(currentTime)}
           </span>
           <button
             onClick={togglePlay}
-            className="cursor-pointer rounded-full p-2.5 text-white transition hover:bg-gray-600 my-[5px]"
+            className="my-[4px] cursor-pointer rounded-full p-1.5 text-white transition hover:bg-gray-600"
           >
-            {isPlaying ? <IoPauseSharp size={25} /> : <IoPlaySharp size={25} />}
+            {isPlaying ? <IoPauseSharp size={24} /> : <IoPlaySharp size={24} />}
           </button>
-          <span className="text-md mx-3 text-gray-500">
+          <span className="text-lg mx-3 mb-1 text-gray-500 sm:mb-0">
             {formatDuration(duration)}
           </span>
         </div>
