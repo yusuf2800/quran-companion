@@ -11,7 +11,7 @@ const QuranVerse = ({ surah, valid }: { surah: number; valid: boolean }) => {
   const navigate = () => router.push("/");
 
   const [duration, setDuration] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
