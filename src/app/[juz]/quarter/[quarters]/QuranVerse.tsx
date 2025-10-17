@@ -94,7 +94,7 @@ const QuranVerse = ({
 
   const reciters = ["Mishary Rashid Alafsay", "Yasser Al Dosari"];
 
-  // const [typeReciter, setTypeReciter] = useState("Mishary Rashid Alafsay");
+  const [, setTypeReciter] = useState("Mishary Rashid Alafsay");
 
   useEffect(() => {
     if (activeAyahIndex === null) return;
