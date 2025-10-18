@@ -163,7 +163,7 @@ const QuranVerse = ({
             </h1>
           </div>
 
-          <div className="mx-2 sm:mx-4">
+          {/* <div className="mx-2 sm:mx-4">
             {arabic[juz][quarter].map((ayah, index) => (
               <div
                 key={index}
@@ -189,7 +189,7 @@ const QuranVerse = ({
                 <div className="h-[1.5px] w-full bg-gray-600"></div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
