@@ -1,5 +1,5 @@
 "use client";
-import { arabic, alafsayTimestamps, translation } from "./quran";
+import {  alafsayTimestamps } from "./quran";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useCallback } from "react";
