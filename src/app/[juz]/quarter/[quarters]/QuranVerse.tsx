@@ -53,10 +53,6 @@ const QuranVerse = ({
     }
     setCurrentTime(time);
 
-    if (currentTime === audio?.duration) {
-      setIsPlaying(false);
-    }
-
     const ayahs = alafsayTimestamps[juz]?.[quarter] ?? [];
     const idx = ayahs.findIndex((a) => time >= a.start && time < a.end);
     setActiveAyahIndex(idx >= 0 ? idx : null);
@@ -241,7 +237,11 @@ const QuranVerse = ({
           </span>
         </div>
 
-        <audio ref={audioRef} src={audioSrc} />
+        <audio
+          ref={audioRef}
+          src={audioSrc}
+          onEnded={() => setIsPlaying(false)}
+        />
       </div>
     </>
   );
