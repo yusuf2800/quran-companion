@@ -53,7 +53,7 @@ const QuranVerse = ({
     }
     setCurrentTime(time);
 
-    if (currentTime===audio?.duration) {
+    if (currentTime === audio?.duration) {
       setIsPlaying(false);
     }
 
@@ -101,8 +101,6 @@ const QuranVerse = ({
     { name: "Yasser Al Dosari", value: "Yasser" },
   ];
 
-  const [, setTypeReciterIndex] = useState<number>(0);
-
   useEffect(() => {
     if (activeAyahIndex === null) return;
     const el = ayahRefs.current[activeAyahIndex];
@@ -114,6 +112,10 @@ const QuranVerse = ({
     }
   }, [activeAyahIndex]);
 
+  const [audioSrc, setAudioSrc] = useState<string>(
+    `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}Alafasy.mp3`,
+  );
+
   if (!valid) {
     return (
       <div className="flex h-screen w-screen items-center justify-center">
@@ -123,11 +125,6 @@ const QuranVerse = ({
       </div>
     );
   }
-
-  const [audioSrc, setAudioSrc] = useState<string>(
-    `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}Alafasy.mp3`,
-  );
-
 
   return (
     <>
