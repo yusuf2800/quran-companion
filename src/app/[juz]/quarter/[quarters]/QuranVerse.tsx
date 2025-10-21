@@ -1,5 +1,5 @@
 "use client";
-import {  alafsayTimestamps } from "./quran";
+import { alafsayTimestamps } from "./quran";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -53,6 +53,10 @@ const QuranVerse = ({
     }
     setCurrentTime(time);
 
+    if (currentTime===audio?.duration) {
+      setIsPlaying(false);
+    }
+
     const ayahs = alafsayTimestamps[juz]?.[quarter] ?? [];
     const idx = ayahs.findIndex((a) => time >= a.start && time < a.end);
     setActiveAyahIndex(idx >= 0 ? idx : null);
@@ -92,9 +96,12 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  const reciters = ["Mishary Rashid Alafsay", "Yasser Al Dosari"];
+  const reciters = [
+    { name: "Mishary Rashid Alafsay", value: "Alafasy" },
+    { name: "Yasser Al Dosari", value: "Yasser" },
+  ];
 
-  const [, setTypeReciter] = useState("Mishary Rashid Alafsay");
+  const [, setTypeReciterIndex] = useState<number>(0);
 
   useEffect(() => {
     if (activeAyahIndex === null) return;
@@ -117,6 +124,11 @@ const QuranVerse = ({
     );
   }
 
+  const [audioSrc, setAudioSrc] = useState<string>(
+    `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}Alafasy.mp3`,
+  );
+
+
   return (
     <>
       <header className="fixed top-0 left-0 z-50 flex w-screen items-center justify-between bg-transparent/30 backdrop-blur-2xl selection:bg-emerald-400">
@@ -137,15 +149,26 @@ const QuranVerse = ({
               Reciters <ChevronDown size={20} className="my-auto ml-1" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-3 rounded-[3px] border-0 bg-gray-800 font-semibold text-white shadow-lg selection:bg-emerald-400">
-              {reciters.map((reciter, index) => (
-                <DropdownMenuItem
-                  key={index}
-                  className="cursor-pointer border-0 text-white hover:bg-gray-700"
-                  onClick={() => setTypeReciter(reciter)}
-                >
-                  {reciter}
-                </DropdownMenuItem>
-              ))}
+              {reciters.map(
+                (
+                  { name, value }: { name: string; value: string },
+                  index: number,
+                ) => (
+                  <DropdownMenuItem
+                    key={index}
+                    className="cursor-pointer border-0 text-white hover:bg-gray-700"
+                    onClick={() => {
+                      setAudioSrc(
+                        () =>
+                          `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}${value}.mp3`,
+                      );
+                      setIsPlaying(false);
+                    }}
+                  >
+                    {name}
+                  </DropdownMenuItem>
+                ),
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -207,7 +230,7 @@ const QuranVerse = ({
         />
 
         <div className="mx-1.5 flex w-screen items-center justify-between">
-          <span className="text-lg mx-3 mb-0.5 text-gray-500 sm:mb-0">
+          <span className="mx-3 mb-0.5 text-lg text-gray-500 sm:mb-0">
             {formatDuration(currentTime)}
           </span>
           <button
@@ -216,12 +239,12 @@ const QuranVerse = ({
           >
             {isPlaying ? <IoPauseSharp size={24} /> : <IoPlaySharp size={24} />}
           </button>
-          <span className="text-lg mx-3 mb-1 text-gray-500 sm:mb-0">
+          <span className="mx-3 mb-1 text-lg text-gray-500 sm:mb-0">
             {formatDuration(duration)}
           </span>
         </div>
 
-        <audio ref={audioRef} src={`https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}Yasser.mp3`} />
+        <audio ref={audioRef} src={audioSrc} />
       </div>
     </>
   );
