@@ -9,16 +9,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+// import {
+//   Dialog,
+//   DialogClose,
+//   DialogContent,
+//   DialogDescription,
+//   DialogFooter,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "@/components/ui/dialog"
 import {
   IoPlaySharp,
   IoPauseSharp,
@@ -109,10 +109,10 @@ const QuranVerse = ({
     return `${minutes}:${seconds}`;
   };
 
-  const reciters = [
-    { name: "Mishary Rashid Alafsay", value: "Alafasy" },
-    { name: "Yasser Al Dosari", value: "Yasser" },
-  ];
+  // const reciters = [
+  //   { name: "Mishary Rashid Alafsay", value: "Alafasy" },
+  //   { name: "Yasser Al Dosari", value: "Yasser" },
+  // ];
 
   useEffect(() => {
     if (activeAyahIndex === null) return;
