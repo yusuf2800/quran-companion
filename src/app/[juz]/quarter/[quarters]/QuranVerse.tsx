@@ -9,8 +9,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
-import { IoPlaySharp, IoPauseSharp } from "react-icons/io5";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
+  IoPlaySharp,
+  IoPauseSharp,
+  IoPlayForwardSharp,
+  IoPersonOutline,
+  IoDownloadOutline,
+} from "react-icons/io5";
+import { MdNavigateNext } from "react-icons/md";
+import { HiDotsHorizontal } from "react-icons/hi";
 
 const QuranVerse = ({
   juz,
@@ -108,9 +125,32 @@ const QuranVerse = ({
     }
   }, [activeAyahIndex]);
 
-  const [audioSrc, setAudioSrc] = useState<string>(
+  const [audioSrc] = useState<string>(
     `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}Alafasy.mp3`,
   );
+
+  const downloadAudio = () => {
+    const link = document.createElement("a");
+    link.href =
+      `https://res.cloudinary.com/ddsiorkrx/video/upload/fl_attachment/${juz}.${quarter}Alafasy.mp3`;
+    link.download = `${juz}.${quarter}.mp3`;
+    link.click();
+  };
+
+  const items = [
+    {
+      span: "Download",
+      icon: <IoDownloadOutline className="text-white" size={20} />,
+      arrow: false,
+      event: downloadAudio,
+    },
+    {
+      span: "Reciter",
+      icon: <IoPersonOutline className="text-white" size={20} />,
+      arrow: true,
+      event: () => {},
+    },
+  ];
 
   if (!valid) {
     return (
@@ -137,34 +177,6 @@ const QuranVerse = ({
         </motion.label>
 
         <div className="mx-5 flex items-center gap-x-5">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex cursor-pointer flex-row border-0 px-10 font-extrabold text-white">
-              Reciters <ChevronDown size={20} className="my-auto ml-1" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="mt-3 rounded-[3px] border-0 bg-gray-800 font-semibold text-white shadow-lg selection:bg-emerald-400">
-              {reciters.map(
-                (
-                  { name, value }: { name: string; value: string },
-                  index: number,
-                ) => (
-                  <DropdownMenuItem
-                    key={index}
-                    className="cursor-pointer border-0 text-white hover:bg-gray-700"
-                    onClick={() => {
-                      setAudioSrc(
-                        () =>
-                          `https://res.cloudinary.com/ddsiorkrx/video/upload/${juz}.${quarter}${value}.mp3`,
-                      );
-                      setIsPlaying(false);
-                    }}
-                  >
-                    {name}
-                  </DropdownMenuItem>
-                ),
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           <h1 className="px-2 py-2.5 font-bold text-white">
             {`Quarter ${quarter} - Juz ${juz}`}
           </h1>
@@ -212,7 +224,7 @@ const QuranVerse = ({
       <div className="fixed bottom-0 left-0 flex w-full flex-col items-center border-none bg-gray-800 shadow-xl">
         <input
           type="range"
-          className="h-[3px] w-screen appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-4 [&::-ms-thumb]:w-4 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
+          className="h-[3px] w-screen cursor-pointer appearance-none bg-gray-300 accent-emerald-500 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-emerald-500 [&::-ms-thumb]:h-4 [&::-ms-thumb]:w-4 [&::-ms-thumb]:cursor-pointer [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-emerald-500 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500"
           min="0"
           max={isNaN(duration) ? 0 : duration}
           value={currentTime}
@@ -226,12 +238,56 @@ const QuranVerse = ({
           <span className="mx-3 mb-0.5 text-lg text-gray-500 sm:mb-0">
             {formatDuration(currentTime)}
           </span>
-          <button
-            onClick={togglePlay}
-            className="my-[4px] cursor-pointer rounded-full p-[7px] text-white transition hover:bg-gray-600"
-          >
-            {isPlaying ? <IoPauseSharp size={24} /> : <IoPlaySharp size={24} />}
-          </button>
+          <div className="flex">
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger className="mx-5 my-[4px] cursor-pointer rounded-full p-[7px] text-white outline-hidden hover:bg-gray-600">
+                <HiDotsHorizontal
+                  size={22}
+                  style={{ transform: "rotate(180deg)" }}
+                  className=""
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="border-0 bg-gray-800 py-2 font-semibold text-white shadow-lg selection:bg-emerald-400">
+                {items.map(({ span, icon, arrow, event }, index) => (
+                  <DropdownMenuItem
+                    key={index}
+                    className="flex cursor-pointer items-center justify-between gap-10 bg-gray-800 px-4 py-2 text-[16px] text-white hover:bg-gray-700"
+                    onClick={event}
+                  >
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      <span className="font-normal">{span}</span>
+                    </div>
+                    {arrow && (
+                      <MdNavigateNext className="text-white" size={20} />
+                    )}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <button className="my-[4px] cursor-pointer rounded-full p-[7px] text-white hover:bg-gray-600">
+              <IoPlayForwardSharp
+                size={24}
+                style={{ transform: "rotate(180deg)" }}
+                className=""
+              />
+            </button>
+
+            <button
+              onClick={togglePlay}
+              className="mx-3 my-[4px] cursor-pointer rounded-full p-[7px] text-white transition hover:bg-gray-600"
+            >
+              {isPlaying ? (
+                <IoPauseSharp size={24} />
+              ) : (
+                <IoPlaySharp size={24} />
+              )}
+            </button>
+            <button className="my-[4px] cursor-pointer rounded-full p-[7px] text-white hover:bg-gray-600">
+              <IoPlayForwardSharp size={24} />
+            </button>
+          </div>
           <span className="mx-3 mb-1 text-lg text-gray-500 sm:mb-0">
             {formatDuration(duration)}
           </span>

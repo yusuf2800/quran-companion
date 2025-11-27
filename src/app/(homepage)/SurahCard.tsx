@@ -48,6 +48,7 @@ export const SurahCard = () => {
           whileInView={{ y: 0, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{once: true}}
         >
           <TabsList className="h-full w-screen rounded-none bg-transparent text-center shadow-2xl selection:bg-transparent">
             {tabs.map(({ name, value }, index) => (
